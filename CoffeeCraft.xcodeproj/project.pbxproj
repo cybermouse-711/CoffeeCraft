@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817B2B6AEA4200B81616 /* AppDelegate.swift */; };
 		C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817D2B6AEA4200B81616 /* SceneDelegate.swift */; };
-		C67581802B6AEA4200B81616 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817F2B6AEA4200B81616 /* ViewController.swift */; };
-		C67581832B6AEA4200B81616 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67581812B6AEA4200B81616 /* Main.storyboard */; };
+		C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817F2B6AEA4200B81616 /* StartViewController.swift */; };
 		C67581852B6AEA4300B81616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67581842B6AEA4300B81616 /* Assets.xcassets */; };
 		C67581882B6AEA4300B81616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67581862B6AEA4300B81616 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +18,7 @@
 		C67581782B6AEA4200B81616 /* CoffeeCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C675817B2B6AEA4200B81616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C675817D2B6AEA4200B81616 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C675817F2B6AEA4200B81616 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C67581822B6AEA4200B81616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C675817F2B6AEA4200B81616 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		C67581842B6AEA4300B81616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C67581872B6AEA4300B81616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C67581892B6AEA4300B81616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,8 +56,7 @@
 			children = (
 				C675817B2B6AEA4200B81616 /* AppDelegate.swift */,
 				C675817D2B6AEA4200B81616 /* SceneDelegate.swift */,
-				C675817F2B6AEA4200B81616 /* ViewController.swift */,
-				C67581812B6AEA4200B81616 /* Main.storyboard */,
+				C675817F2B6AEA4200B81616 /* StartViewController.swift */,
 				C67581842B6AEA4300B81616 /* Assets.xcassets */,
 				C67581862B6AEA4300B81616 /* LaunchScreen.storyboard */,
 				C67581892B6AEA4300B81616 /* Info.plist */,
@@ -127,7 +124,6 @@
 			files = (
 				C67581882B6AEA4300B81616 /* LaunchScreen.storyboard in Resources */,
 				C67581852B6AEA4300B81616 /* Assets.xcassets in Resources */,
-				C67581832B6AEA4200B81616 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +134,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C67581802B6AEA4200B81616 /* ViewController.swift in Sources */,
+				C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */,
 				C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */,
 				C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +143,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		C67581812B6AEA4200B81616 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C67581822B6AEA4200B81616 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C67581862B6AEA4300B81616 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -292,9 +280,9 @@
 				INFOPLIST_FILE = CoffeeCraft/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,9 +290,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.liza.Ex.CoffeeCraft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -320,9 +311,9 @@
 				INFOPLIST_FILE = CoffeeCraft/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,9 +321,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.liza.Ex.CoffeeCraft;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
