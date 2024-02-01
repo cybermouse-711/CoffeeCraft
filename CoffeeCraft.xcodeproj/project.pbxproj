@@ -12,6 +12,8 @@
 		C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817F2B6AEA4200B81616 /* StartViewController.swift */; };
 		C67581852B6AEA4300B81616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67581842B6AEA4300B81616 /* Assets.xcassets */; };
 		C67581882B6AEA4300B81616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67581862B6AEA4300B81616 /* LaunchScreen.storyboard */; };
+		C67581902B6AFA2100B81616 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675818F2B6AFA2100B81616 /* Model.swift */; };
+		C67581922B6AFA4200B81616 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67581912B6AFA4200B81616 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		C67581842B6AEA4300B81616 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C67581872B6AEA4300B81616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C67581892B6AEA4300B81616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C675818F2B6AFA2100B81616 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		C67581912B6AFA4200B81616 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				C675817B2B6AEA4200B81616 /* AppDelegate.swift */,
 				C675817D2B6AEA4200B81616 /* SceneDelegate.swift */,
 				C675817F2B6AEA4200B81616 /* StartViewController.swift */,
+				C675818F2B6AFA2100B81616 /* Model.swift */,
+				C67581912B6AFA4200B81616 /* NetworkManager.swift */,
 				C67581842B6AEA4300B81616 /* Assets.xcassets */,
 				C67581862B6AEA4300B81616 /* LaunchScreen.storyboard */,
 				C67581892B6AEA4300B81616 /* Info.plist */,
@@ -136,7 +142,9 @@
 			files = (
 				C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */,
 				C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */,
+				C67581922B6AFA4200B81616 /* NetworkManager.swift in Sources */,
 				C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */,
+				C67581902B6AFA2100B81616 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
