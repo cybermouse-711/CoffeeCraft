@@ -13,7 +13,6 @@ struct Drink {
     let roasting: Roasting //Обжарка зерен
     let type: TypeDrink //Тип напитка
     let temperature: Degrees
-    let milk = true
     let sugar = true
     let honey = true
     let spices = true
@@ -23,84 +22,53 @@ struct Drink {
 
 //TODO: - Доработать метод
 enum NotChosen: String {
-    case defalt = "по умолчанию"
+    case defalt = "Default"
 }
-
-//TODO: - Поправить названия с русского на англ
 
 enum Grains: String {
-    case arabica = "Арабика"
-    case robusta = "Робуста"
-    case liberica = "Либерика"
-    case excelsa = "Эксцельса"
+    case arabica = "Arabica"
+    case robusta = "Robusta"
+    case liberica = "Liberica"
+    case excelsa = "Excelsa"
 }
 
+//TODO: Поправить на формулу через свитч
 enum Subtlety: String {
-    case large = "крупный"
-    case medium = "средний"
-    case small = "мелкий"
-    case extraFine = "сверхтонкий"
+    case extraFine = "Extra fine"
+    case fine = "Fine"
+    case medium = "Medium"
+    case coarse = "Coarse"
 }
 
 enum Roasting: String {
-    case light = "светлая"
-    case dark = "темная"
+    case light = "Light"
+    case medium = "Medium"
+    case mediumDark = "Medium-Dark"
+    case dark = "Dark"
 }
 
-//TODO: - Доработать метод 
 struct TypeDrink {
-    let withMilk: MilkDrink
-    let notMilk: NotMilkDrink
-}
-
-enum MilkDrink: String {
-    case cappuccino = "капучино"
-    case latte = "латте"
-    case raf = "раф"
-    case mocha = "мокко"
-    case flatWhite = "флэт уайт"
-    case vienneseCoffee = "кофе по венски"
-    case macchiato = "маккиато"
-    case glasse = "гласе"
-    case irish = "айриш"
-    case bicherin = "бичерин"
-}
-
-enum NotMilkDrink: String {
-   case espresso = "эспрессо"
-   case doubleEspresso = "двойное эсспрессо"
-   case americano = "американо"
-   case dopoi = "допои"
-   case hole = "лунка"
-   case ristretto = "ристретто"
+    let milk = true
+    
+    var type: [String] {
+        milk
+        ? ["Macchiato", "Long Macchiato", "Cortado", "Breve", "Cappuccino", "Flat White", "Cafe Latte", "Mocha", "Vienna", "Affogato", "Cafe au Lait"]
+        : ["Espresso", "Double Espresso", "Red Eye", "Black Eye", "Americano", "Long Black"]
+    }
 }
 
 enum Degrees: String {
-    case ice = "холодный"
-    case hot = "горячий"
+    case ice = "Ice"
+    case hot = "Hot"
     
 }
-/*
-enum Milk: String {
-    case ordinary = "обычное"
-    case soy = "соевое"
-    case almond = "миндальное"
-    case coconut = "кокосовое"
-    case oatmeal = "овсяное"
-}
-*/
+
 enum Dishes: String {
-    case turk = "турка"
-    case geyserCoffee = "гейзерная кофеварка"
-    case coffeeMachine = "кофемашина"
-    case frenchPress = "френчпресс"
-    case filterCoffee = "фильтр-кофе"
+    case cezve = "Cezve"
+    case mokaPot = "Moka Pot"
+    case espressoMachine  = "Espresso Machine"
+    case frenchPress = "French Press"
+    case filter = "Filter"
 }
 
-/*
- 
- Тип напитка
- (без молока (эспрессо, двойное эсспрессо, американо, допои, лунка, ристретто),
- с молоком (капучино, латте, раф, мокко, флэт уайт, кофе по венски, маккиато, гласе, айриш, бичерин))
- 
- */
+//https://www.webstaurantstore.com/article/397/types-of-coffee-drinks.html
