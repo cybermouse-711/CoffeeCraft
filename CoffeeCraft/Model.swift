@@ -48,7 +48,7 @@ enum Roasting: String {
 }
 
 struct TypeDrink {
-    let milk = true
+    var milk = true
     
     var type: [String] {
         milk
@@ -60,7 +60,6 @@ struct TypeDrink {
 enum Degrees: String {
     case ice = "Ice"
     case hot = "Hot"
-    
 }
 
 enum Dishes: String {

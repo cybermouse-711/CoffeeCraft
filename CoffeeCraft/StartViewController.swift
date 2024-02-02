@@ -14,50 +14,60 @@ final class StartViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupView()
+        setupUI()
       
     }
 
-
 }
 
-//MARK: - Settings View
+//MARK: - Configure UI
 private extension StartViewController {
-    func setupView() {
-        view.backgroundColor = .systemBrown
-        
+    func setupUI() {
         addSubViews()
+        
+        setupConctraints()
+        
+        setupSelfView()
         setupStartButton()
-        setupLayout()
+    }
+}
+
+//MARK: - Setup UI
+private extension StartViewController {
+    func setupSelfView() {
+        view.backgroundColor = .systemBrown
     }
     
-}
-
-//MARK: - Settings
-private extension StartViewController {
     func addSubViews() {
         view.addSubview(startButton)
     }
     
     func setupStartButton(){
-        startButton.setTitle("Create a drink", for: .normal)
+        startButton.setTitle(Constants.startButtonTitle, for: .normal)
         startButton.setTitleColor(.black, for: .normal)
-        startButton.layer.cornerRadius = 15
+        startButton.layer.cornerRadius = 30
         startButton.backgroundColor = .white
         startButton.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
     }
-    
 }
 
-//MARK: - Layout
+//MARK: - Constraints
 private extension StartViewController {
-    func setupLayout() {
+    func setupConctraints() {
         startButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
+            startButton.widthAnchor.constraint(equalToConstant: 250),
+            startButton.heightAnchor.constraint(equalToConstant: 70),
             startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             startButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
         ])
     }
-    
+}
+
+//MARK: - Constants
+private extension StartViewController {
+    enum Constants {
+        static let startButtonTitle: String = "Create a drink"
+    }
 }
