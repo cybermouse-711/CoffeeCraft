@@ -31,13 +31,32 @@ enum Grains: String {
     case liberica = "Liberica"
     case excelsa = "Excelsa"
 }
-
-//TODO: Поправить на формулу через свитч
+/*
+struct Subtlety {
+    let dis = dishes
+    
+    var subtlety: [String] {
+        
+        switch dis {
+        case .cezve:
+            return ["Extra fine"]
+        case .espressoMachine:
+            return ["Fine"]
+        case .filter:
+            return ["Medium"]
+        case .frenchPress:
+            return ["Medium", "Coarse"]
+        case .mokaPot:
+            return ["Fine", "Medium"]
+        }
+    }
+}
+*/
 enum Subtlety: String {
-    case extraFine = "Extra fine"
-    case fine = "Fine"
-    case medium = "Medium"
-    case coarse = "Coarse"
+    case extraFine = "Extra fine" //турка
+    case fine = "Fine" //кофемашина и гейзерная
+    case medium = "Medium" // гейзерная и филтер и френч пресс
+    case coarse = "Coarse" // френч пресс
 }
 
 enum Roasting: String {
@@ -69,5 +88,3 @@ enum Dishes: String {
     case frenchPress = "French Press"
     case filter = "Filter"
 }
-
-//https://www.webstaurantstore.com/article/397/types-of-coffee-drinks.html

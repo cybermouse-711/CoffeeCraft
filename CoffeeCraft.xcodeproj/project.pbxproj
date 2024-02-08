@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C616035D2B7573A600E1BC9E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616035C2B7573A600E1BC9E /* StartView.swift */; };
+		C61603602B75762C00E1BC9E /* СreationDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616035F2B75762C00E1BC9E /* СreationDrinkView.swift */; };
 		C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817B2B6AEA4200B81616 /* AppDelegate.swift */; };
 		C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817D2B6AEA4200B81616 /* SceneDelegate.swift */; };
 		C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817F2B6AEA4200B81616 /* StartViewController.swift */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C616035C2B7573A600E1BC9E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		C616035F2B75762C00E1BC9E /* СreationDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СreationDrinkView.swift"; sourceTree = "<group>"; };
 		C67581782B6AEA4200B81616 /* CoffeeCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C675817B2B6AEA4200B81616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C675817D2B6AEA4200B81616 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -41,6 +45,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C616035B2B75737E00E1BC9E /* StartScene */ = {
+			isa = PBXGroup;
+			children = (
+				C675817F2B6AEA4200B81616 /* StartViewController.swift */,
+				C616035C2B7573A600E1BC9E /* StartView.swift */,
+			);
+			path = StartScene;
+			sourceTree = "<group>";
+		};
+		C616035E2B75761500E1BC9E /* СreationDrinkScene */ = {
+			isa = PBXGroup;
+			children = (
+				C67581932B6E4CA800B81616 /* СreationDrinkViewController.swift */,
+				C616035F2B75762C00E1BC9E /* СreationDrinkView.swift */,
+			);
+			path = "СreationDrinkScene";
+			sourceTree = "<group>";
+		};
 		C675816F2B6AEA4200B81616 = {
 			isa = PBXGroup;
 			children = (
@@ -62,15 +84,55 @@
 			children = (
 				C675817B2B6AEA4200B81616 /* AppDelegate.swift */,
 				C675817D2B6AEA4200B81616 /* SceneDelegate.swift */,
-				C675817F2B6AEA4200B81616 /* StartViewController.swift */,
-				C67581932B6E4CA800B81616 /* СreationDrinkViewController.swift */,
-				C675818F2B6AFA2100B81616 /* Model.swift */,
-				C67581912B6AFA4200B81616 /* NetworkManager.swift */,
-				C67581842B6AEA4300B81616 /* Assets.xcassets */,
-				C67581862B6AEA4300B81616 /* LaunchScreen.storyboard */,
-				C67581892B6AEA4300B81616 /* Info.plist */,
+				C67581992B6E9D5B00B81616 /* Scene */,
+				C675819A2B6E9D6A00B81616 /* Models */,
+				C675819B2B6E9D7200B81616 /* NetworkManagers */,
+				C67581972B6E9D2000B81616 /* Storiboard */,
+				C67581982B6E9D4100B81616 /* Supports */,
 			);
 			path = CoffeeCraft;
+			sourceTree = "<group>";
+		};
+		C67581972B6E9D2000B81616 /* Storiboard */ = {
+			isa = PBXGroup;
+			children = (
+				C67581862B6AEA4300B81616 /* LaunchScreen.storyboard */,
+			);
+			path = Storiboard;
+			sourceTree = "<group>";
+		};
+		C67581982B6E9D4100B81616 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				C67581892B6AEA4300B81616 /* Info.plist */,
+				C67581842B6AEA4300B81616 /* Assets.xcassets */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		C67581992B6E9D5B00B81616 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				C616035B2B75737E00E1BC9E /* StartScene */,
+				C616035E2B75761500E1BC9E /* СreationDrinkScene */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		C675819A2B6E9D6A00B81616 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C675818F2B6AFA2100B81616 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C675819B2B6E9D7200B81616 /* NetworkManagers */ = {
+			isa = PBXGroup;
+			children = (
+				C67581912B6AFA4200B81616 /* NetworkManager.swift */,
+			);
+			path = NetworkManagers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,12 +205,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61603602B75762C00E1BC9E /* СreationDrinkView.swift in Sources */,
 				C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */,
 				C67581942B6E4CA800B81616 /* СreationDrinkViewController.swift in Sources */,
 				C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */,
 				C67581922B6AFA4200B81616 /* NetworkManager.swift in Sources */,
 				C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */,
 				C67581902B6AFA2100B81616 /* Model.swift in Sources */,
+				C616035D2B7573A600E1BC9E /* StartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +353,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DRYCV5GTMX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoffeeCraft/Info.plist;
+				INFOPLIST_FILE = CoffeeCraft/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -320,7 +384,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DRYCV5GTMX;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = CoffeeCraft/Info.plist;
+				INFOPLIST_FILE = CoffeeCraft/Supports/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
