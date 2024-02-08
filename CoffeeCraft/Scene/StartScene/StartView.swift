@@ -1,31 +1,37 @@
 //
-//  StartViewController.swift
+//  StartView.swift
 //  CoffeeCraft
 //
-//  Created by Елизавета Медведева on 01.02.2024.
+//  Created by Елизавета Медведева on 09.02.2024.
 //
 
 import UIKit
 
-//MARK: - StartViewController
-final class StartViewController: UIViewController {
+//MARK: - StartView
+final class StartView: UIView {
     
+    //MARK: - Private Properties
     private var startButton = UIButton()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    
+    //MARK: - Init
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setupUI()
-      
     }
-
+    
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
 }
 
 //MARK: - Configure UI
-private extension StartViewController {
+private extension StartView {
     func setupUI() {
         addSubViews()
         
-        setupConctraints()
+        setupConctreints()
         
         setupSelfView()
         setupStartButton()
@@ -33,13 +39,13 @@ private extension StartViewController {
 }
 
 //MARK: - Setup UI
-private extension StartViewController {
+private extension StartView {
     func setupSelfView() {
-        view.backgroundColor = .systemBrown
+        backgroundColor = .systemBrown
     }
     
     func addSubViews() {
-        view.addSubview(startButton)
+        addSubview(startButton)
     }
     
     func setupStartButton(){
@@ -52,21 +58,21 @@ private extension StartViewController {
 }
 
 //MARK: - Constraints
-private extension StartViewController {
-    func setupConctraints() {
+private extension StartView {
+    func setupConctreints() {
         startButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             startButton.widthAnchor.constraint(equalToConstant: 250),
             startButton.heightAnchor.constraint(equalToConstant: 70),
-            startButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            startButton.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+            startButton.centerXAnchor.constraint(equalTo: centerXAnchor),
+            startButton.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }
 }
 
 //MARK: - Constants
-private extension StartViewController {
+private extension StartView {
     enum Constants {
         static let startButtonTitle: String = "Create a drink"
     }
