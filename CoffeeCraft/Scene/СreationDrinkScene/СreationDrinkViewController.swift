@@ -15,5 +15,12 @@ final class СreationDrinkViewController: UIViewController {
         super.viewDidLoad()
         view = СreationDrinkView(frame: UIScreen.main.bounds)
     }
-
+    
+    //MARK: - Methods
+    @objc
+    func goRecipeDrinkVC() {
+        let vc = RecipeDrinkViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
 }
