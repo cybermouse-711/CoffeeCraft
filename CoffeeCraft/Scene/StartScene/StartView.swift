@@ -54,7 +54,11 @@ private extension StartView {
         startButton.backgroundColor = .white
         startButton.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         
-        startButton.addTarget(StartViewController(), action: #selector(StartViewController.goCreationDrinkVC), for: .touchUpInside)
+        startButton.addTarget(
+            StartViewController(),
+            action: #selector(StartViewController.goCreationDrinkVC),
+            for: .touchUpInside
+        )
     }
 }
 

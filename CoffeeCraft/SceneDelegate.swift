@@ -13,6 +13,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
+      //  let startVC = Builder.makeStartViewController()
         let startVC = StartViewController()
         
         window = UIWindow(frame: UIScreen.main.bounds)
@@ -22,7 +23,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = scene as? UIWindowScene else { return }
         window?.windowScene = windowScene
-        
     }
 }
 
