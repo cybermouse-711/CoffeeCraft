@@ -8,15 +8,25 @@
 import Foundation
 
 struct Drink {
-    let variety: Grains //Сорт кофе
-    let grinding: Subtlety //Тонкость помола
-    let roasting: Roasting //Обжарка зерен
-    let type: TypeDrink //Тип напитка
+    ///Сорт кофе
+    let variety: Grains
+    ///Тонкость помола/
+    let grinding: Subtlety
+    ///Обжарка зерен
+    let roasting: Roasting
+    ///Тип напитка
+    let type: TypeDrink
+    ///Температура напитка
     let temperature: Degrees
+    ///Добавить сахар
     let sugar = true
+    ///Добавить  мед
     let honey = true
+    ///Добавить специи
     let spices = true
+    ///Добавить сироп
     let syrup = true
+    ///Способ приготовления кофе
     let dishes: Dishes
 }
 
@@ -31,6 +41,8 @@ enum Grains: String {
     case liberica = "Liberica"
     case excelsa = "Excelsa"
 }
+
+//TODO: - Доработать метод
 /*
 struct Subtlety {
     let dis = dishes
@@ -53,10 +65,14 @@ struct Subtlety {
 }
 */
 enum Subtlety: String {
-    case extraFine = "Extra fine" //турка
-    case fine = "Fine" //кофемашина и гейзерная
-    case medium = "Medium" // гейзерная и филтер и френч пресс
-    case coarse = "Coarse" // френч пресс
+    ///Помол для турки
+    case extraFine = "Extra fine"
+    ///Помол для  кофемашины и гейзерная
+    case fine = "Fine"
+    ///Помол для гейзерной, фильтра и френч пресса
+    case medium = "Medium"
+    ///Помол для френч пресса
+    case coarse = "Coarse"
 }
 
 enum Roasting: String {
@@ -82,9 +98,14 @@ enum Degrees: String {
 }
 
 enum Dishes: String {
+    ///Турка
     case cezve = "Cezve"
+    ///Гейзерная
     case mokaPot = "Moka Pot"
+    ///Кофемашина
     case espressoMachine  = "Espresso Machine"
+    ///Френч пресс
     case frenchPress = "French Press"
+    ///Фильтр
     case filter = "Filter"
 }
