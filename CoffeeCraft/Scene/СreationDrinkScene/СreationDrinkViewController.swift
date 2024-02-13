@@ -15,5 +15,5 @@ final class СreationDrinkViewController: UIViewController {
         super.viewDidLoad()
         view = СreationDrinkView(frame: UIScreen.main.bounds)
     }
-    
+
 }

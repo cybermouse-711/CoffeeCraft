@@ -15,6 +15,12 @@ final class StartViewController: UIViewController {
         super.viewDidLoad()
         view = StartView(frame: UIScreen.main.bounds)
     }
-
+    
+    //MARK: - Methods
+    @objc
+    func goCreationDrinkVC() {
+        let vc = СreationDrinkViewController()
+        vc.modalPresentationStyle = .fullScreen
+        present(vc, animated: true)
+    }
 }
-

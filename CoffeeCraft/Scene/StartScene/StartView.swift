@@ -11,7 +11,7 @@ import UIKit
 final class StartView: UIView {
     
     //MARK: - Private Properties
-    private var startButton = UIButton()
+    private let startButton = UIButton()
     
     //MARK: - Init
     override init(frame: CGRect) {
@@ -23,7 +23,6 @@ final class StartView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    
 }
 
 //MARK: - Configure UI
@@ -31,7 +30,7 @@ private extension StartView {
     func setupUI() {
         addSubViews()
         
-        setupConctreints()
+        setupConctraints()
         
         setupSelfView()
         setupStartButton()
@@ -54,12 +53,14 @@ private extension StartView {
         startButton.layer.cornerRadius = 30
         startButton.backgroundColor = .white
         startButton.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+        
+        startButton.addTarget(StartViewController(), action: #selector(StartViewController.goCreationDrinkVC), for: .touchUpInside)
     }
 }
 
 //MARK: - Constraints
 private extension StartView {
-    func setupConctreints() {
+    func setupConctraints() {
         startButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
