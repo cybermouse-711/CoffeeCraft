@@ -10,12 +10,12 @@ import Foundation
 struct Drink {
     ///Способ приготовления кофе
     let dishes: Dishes
+    ///Тип напитка
+    let type: TypeDrink
     ///Сорт кофе
     let variety: Grains
     ///Обжарка зерен
     let roasting: Roasting
-    ///Тип напитка
-    let type: TypeDrink
     ///Температура напитка
     let temperature: Degrees
     ///Добавить сахар

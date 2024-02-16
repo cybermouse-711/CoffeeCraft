@@ -13,7 +13,7 @@ final class RecipeDrinkView: UIView {
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .systemBrown
+        backgroundColor = .brown
     }
     
     @available(*, unavailable)
