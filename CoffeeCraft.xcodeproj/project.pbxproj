@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C616035D2B7573A600E1BC9E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616035C2B7573A600E1BC9E /* StartView.swift */; };
 		C61603602B75762C00E1BC9E /* СreationDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616035F2B75762C00E1BC9E /* СreationDrinkView.swift */; };
+		C662E01A2B7F8DF700548B44 /* Extensions + UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662E0192B7F8DF700548B44 /* Extensions + UIButton.swift */; };
 		C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817B2B6AEA4200B81616 /* AppDelegate.swift */; };
 		C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817D2B6AEA4200B81616 /* SceneDelegate.swift */; };
 		C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817F2B6AEA4200B81616 /* StartViewController.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		C616035C2B7573A600E1BC9E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		C616035F2B75762C00E1BC9E /* СreationDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СreationDrinkView.swift"; sourceTree = "<group>"; };
+		C662E0192B7F8DF700548B44 /* Extensions + UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIButton.swift"; sourceTree = "<group>"; };
 		C67581782B6AEA4200B81616 /* CoffeeCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C675817B2B6AEA4200B81616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C675817D2B6AEA4200B81616 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,23 @@
 			path = "СreationDrinkScene";
 			sourceTree = "<group>";
 		};
+		C662E01B2B7F8E0100548B44 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C662E0192B7F8DF700548B44 /* Extensions + UIButton.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C662E01C2B7F8E1F00548B44 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C675817B2B6AEA4200B81616 /* AppDelegate.swift */,
+				C675817D2B6AEA4200B81616 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		C675816F2B6AEA4200B81616 = {
 			isa = PBXGroup;
 			children = (
@@ -88,10 +107,9 @@
 		C675817A2B6AEA4200B81616 /* CoffeeCraft */ = {
 			isa = PBXGroup;
 			children = (
-				C675817B2B6AEA4200B81616 /* AppDelegate.swift */,
-				C675817D2B6AEA4200B81616 /* SceneDelegate.swift */,
+				C662E01C2B7F8E1F00548B44 /* App */,
 				C67581992B6E9D5B00B81616 /* Scene */,
-				C6A3AC972B7C0AE100853011 /* RecipeDrinkScene */,
+				C662E01B2B7F8E0100548B44 /* Extensions */,
 				C6A3AC9A2B7C121F00853011 /* Builders */,
 				C675819A2B6E9D6A00B81616 /* Models */,
 				C675819B2B6E9D7200B81616 /* NetworkManagers */,
@@ -123,6 +141,7 @@
 			children = (
 				C616035B2B75737E00E1BC9E /* StartScene */,
 				C616035E2B75761500E1BC9E /* СreationDrinkScene */,
+				C6A3AC972B7C0AE100853011 /* RecipeDrinkScene */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -241,6 +260,7 @@
 				C6A3AC952B7C0A9A00853011 /* RecipeDrinkViewController.swift in Sources */,
 				C67581902B6AFA2100B81616 /* Model.swift in Sources */,
 				C616035D2B7573A600E1BC9E /* StartView.swift in Sources */,
+				C662E01A2B7F8DF700548B44 /* Extensions + UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
