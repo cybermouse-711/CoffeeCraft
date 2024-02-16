@@ -13,6 +13,20 @@ final class СreationDrinkView: UIView {
     //MARK: - Private Properties
     private let createButton = UIButton()
     
+    private let dishesLabel = UILabel()
+    private let milkLabel = UILabel()
+    private let typeLabel = UILabel()
+    private let grindingLabel = UILabel()
+    private let varietyLabel = UILabel()
+    private let roastingLabel = UILabel()
+    private let temperatureLabel = UILabel()
+    private let sugarLabel = UILabel()
+    private let honeyLabel = UILabel()
+    private let spicesLabel = UILabel()
+    private let syrupLabel = UILabel()
+    
+    private let stackViewLabel = UIStackView()
+    
     //MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,17 +48,30 @@ private extension СreationDrinkView {
         
         setupSelfView()
         setupCreateButton()
+        setupStackViewLabel()
+        setupDishesLabel()
+        setupMilkLabel()
+        setupTypeLabel()
+        setuphoneyLabel()
+        setupsugarLabel()
+        setupvarietyLabel()
+        setupgrindingLabel()
+        setuproastingLabel()
+        setuptemperatureLabel()
+        setupspicesLabel()
+        setupsyrupLabel()
     }
 }
 
 //MARK: - Setup UI
 private extension СreationDrinkView {
     func setupSelfView(){
-        backgroundColor = .brown
+        backgroundColor = .systemBrown
     }
     
     func addSubViews() {
         addSubview(createButton)
+        addSubview(stackViewLabel)
     }
     
     func setupCreateButton() {
@@ -60,18 +87,88 @@ private extension СreationDrinkView {
             for: .touchUpInside
         )
     }
+    
+    func setupStackViewLabel(){
+        stackViewLabel.axis = .vertical
+        stackViewLabel.distribution = .fill
+        stackViewLabel.spacing = 20
+        
+        [dishesLabel, milkLabel, typeLabel, grindingLabel, varietyLabel, roastingLabel, roastingLabel, temperatureLabel, sugarLabel, honeyLabel, spicesLabel, syrupLabel
+        ].forEach { subView in
+            stackViewLabel.addArrangedSubview(subView)
+        }
+    }
+  
+    func setupDishesLabel() {
+        dishesLabel.getElementLabel(for: dishesLabel, with: "Dishes")
+    }
+    
+    func setupMilkLabel() {
+        milkLabel.getElementLabel(for: milkLabel, with: "Milk")
+    }
+    
+    func setupTypeLabel() {
+        typeLabel.getElementLabel(for: typeLabel, with: "Type")
+    }
+    
+    func setupgrindingLabel() {
+        grindingLabel.getElementLabel(for: grindingLabel, with: "Grinding")
+    }
+    
+    func setupvarietyLabel() {
+        varietyLabel.getElementLabel(for: varietyLabel, with: "Variety")
+    }
+    
+    func setuproastingLabel() {
+        roastingLabel.getElementLabel(for: roastingLabel, with: "Roasting")
+    }
+    
+    func setuptemperatureLabel() {
+        temperatureLabel.getElementLabel(for: temperatureLabel, with: "Temperature")
+    }
+    
+    func setupsugarLabel() {
+        sugarLabel.getElementLabel(for: sugarLabel, with: "Sugar")
+    }
+    
+    func setuphoneyLabel() {
+        honeyLabel.getElementLabel(for: honeyLabel, with: "Honey")
+    }
+    
+    func setupspicesLabel() {
+        spicesLabel.getElementLabel(for: spicesLabel, with: "Spices")
+    }
+    
+    func setupsyrupLabel() {
+        syrupLabel.getElementLabel(for: syrupLabel, with: "Syrup")
+    }
+
+//    func setupLabel() {
+//        let labels = [UILabel]()
+//        
+//        for label in labels {
+//            label.getElementLabel(for: label, with: "\(label)")
+//        }
+//    }
+//    
+    
 }
 
 //MARK: - Constraints
 private extension СreationDrinkView {
     func setupConctraints() {
+        stackViewLabel.translatesAutoresizingMaskIntoConstraints = false
         createButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
+            stackViewLabel.topAnchor.constraint(equalTo: topAnchor, constant: 100),
+            stackViewLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            stackViewLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
+            
             createButton.widthAnchor.constraint(equalToConstant: 250),
             createButton.heightAnchor.constraint(equalToConstant: 70),
             createButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            createButton.centerYAnchor.constraint(equalTo: centerYAnchor)
+            createButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100)
         ])
     }
 }
