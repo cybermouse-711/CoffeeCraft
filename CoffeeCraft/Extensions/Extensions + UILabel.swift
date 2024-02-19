@@ -9,6 +9,8 @@ import UIKit
 
 // MARK: - Extensions for UILabel
 extension UILabel {
+    
+    ///Настройка интерфейса
     func getElementLabel(for label: UILabel, with text: String) {
         let label = label
         

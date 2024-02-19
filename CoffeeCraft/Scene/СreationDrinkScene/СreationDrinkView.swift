@@ -13,6 +13,14 @@ final class СreationDrinkView: UIView {
     //MARK: - Private Properties
     private let createButton = UIButton()
     
+    private let creationLabels = [UILabel]()
+    
+//    private let drink: Drink!
+//    
+//    private let titles = ["\(drink.dishes)", "\(drink.milk)", "\(drink.type)", "\(drink.grinding)", "\(drink.variety)", "\(drink.roasting)", "\(drink.roasting)"]
+  
+   // private let titles: [String] = ["dishes", "drink.milk", "type", "grinding", "variety", "roasting", "roasting"]
+    
     private let dishesLabel = UILabel()
     private let milkLabel = UILabel()
     private let typeLabel = UILabel()
@@ -49,6 +57,7 @@ private extension СreationDrinkView {
         setupSelfView()
         setupCreateButton()
         setupStackViewLabel()
+  //      setupLabels()
         setupDishesLabel()
         setupMilkLabel()
         setupTypeLabel()
@@ -93,12 +102,23 @@ private extension СreationDrinkView {
         stackViewLabel.distribution = .fill
         stackViewLabel.spacing = 20
         
+        //        creationLabels.forEach { subView in
+        //            stackViewLabel.addArrangedSubview(subView)
+        //        }
+        //    }
+        //
+        //    func setupLabels() {
+        //        for (label, title) in zip(creationLabels, titles) {
+        //            label.getElementLabel(for: label, with: title)
+        //        }
+        //    }
+        
         [dishesLabel, milkLabel, typeLabel, grindingLabel, varietyLabel, roastingLabel, roastingLabel, temperatureLabel, sugarLabel, honeyLabel, spicesLabel, syrupLabel
         ].forEach { subView in
             stackViewLabel.addArrangedSubview(subView)
         }
     }
-  
+    
     func setupDishesLabel() {
         dishesLabel.getElementLabel(for: dishesLabel, with: "Dishes")
     }
@@ -142,16 +162,6 @@ private extension СreationDrinkView {
     func setupsyrupLabel() {
         syrupLabel.getElementLabel(for: syrupLabel, with: "Syrup")
     }
-
-//    func setupLabel() {
-//        let labels = [UILabel]()
-//        
-//        for label in labels {
-//            label.getElementLabel(for: label, with: "\(label)")
-//        }
-//    }
-//    
-    
 }
 
 //MARK: - Constraints
@@ -173,9 +183,10 @@ private extension СreationDrinkView {
     }
 }
 
-//MARK: - Constants
-private extension СreationDrinkView {
-    enum Constants {
-        static let createButtonTitle: String = "Recipe drink"
+    //MARK: - Constants
+    private extension СreationDrinkView {
+        enum Constants {
+            static let createButtonTitle: String = "Recipe drink"
+        }
     }
-}
+    

@@ -27,7 +27,7 @@ struct Drink {
     ///Добавить сироп
     let syrup = true
 
-    ///Тонкость помола/
+    ///Тонкость помола
     var grinding: [String] {
         switch dishes {
         case Dishes.cezve:
