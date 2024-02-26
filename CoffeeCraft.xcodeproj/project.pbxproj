@@ -16,12 +16,13 @@
 		C67581852B6AEA4300B81616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C67581842B6AEA4300B81616 /* Assets.xcassets */; };
 		C67581882B6AEA4300B81616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C67581862B6AEA4300B81616 /* LaunchScreen.storyboard */; };
 		C67581902B6AFA2100B81616 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675818F2B6AFA2100B81616 /* Model.swift */; };
-		C67581922B6AFA4200B81616 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67581912B6AFA4200B81616 /* NetworkManager.swift */; };
+		C67581922B6AFA4200B81616 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67581912B6AFA4200B81616 /* DataManager.swift */; };
 		C67581942B6E4CA800B81616 /* СreationDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C67581932B6E4CA800B81616 /* СreationDrinkViewController.swift */; };
 		C6A28BD02B7FB60B00E31B52 /* Extensions + UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A28BCF2B7FB60B00E31B52 /* Extensions + UILabel.swift */; };
 		C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */; };
 		C6A3AC952B7C0A9A00853011 /* RecipeDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */; };
 		C6A3AC992B7C121B00853011 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC982B7C121B00853011 /* Builder.swift */; };
+		C6C527032B87F9C800385A08 /* StackViewsWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C527022B87F9C800385A08 /* StackViewsWithSwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,12 +37,13 @@
 		C67581872B6AEA4300B81616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C67581892B6AEA4300B81616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C675818F2B6AFA2100B81616 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
-		C67581912B6AFA4200B81616 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		C67581912B6AFA4200B81616 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C67581932B6E4CA800B81616 /* СreationDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СreationDrinkViewController.swift"; sourceTree = "<group>"; };
 		C6A28BCF2B7FB60B00E31B52 /* Extensions + UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UILabel.swift"; sourceTree = "<group>"; };
 		C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkView.swift; sourceTree = "<group>"; };
 		C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkViewController.swift; sourceTree = "<group>"; };
 		C6A3AC982B7C121B00853011 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		C6C527022B87F9C800385A08 /* StackViewsWithSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewsWithSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +115,10 @@
 				C662E01C2B7F8E1F00548B44 /* App */,
 				C67581992B6E9D5B00B81616 /* Scene */,
 				C662E01B2B7F8E0100548B44 /* Extensions */,
+				C6C527042B87F9CD00385A08 /* Vews */,
 				C6A3AC9A2B7C121F00853011 /* Builders */,
 				C675819A2B6E9D6A00B81616 /* Models */,
-				C675819B2B6E9D7200B81616 /* NetworkManagers */,
+				C675819B2B6E9D7200B81616 /* DataManager */,
 				C67581972B6E9D2000B81616 /* Storiboard */,
 				C67581982B6E9D4100B81616 /* Supports */,
 			);
@@ -157,12 +160,12 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		C675819B2B6E9D7200B81616 /* NetworkManagers */ = {
+		C675819B2B6E9D7200B81616 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				C67581912B6AFA4200B81616 /* NetworkManager.swift */,
+				C67581912B6AFA4200B81616 /* DataManager.swift */,
 			);
-			path = NetworkManagers;
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		C6A3AC972B7C0AE100853011 /* RecipeDrinkScene */ = {
@@ -180,6 +183,14 @@
 				C6A3AC982B7C121B00853011 /* Builder.swift */,
 			);
 			path = Builders;
+			sourceTree = "<group>";
+		};
+		C6C527042B87F9CD00385A08 /* Vews */ = {
+			isa = PBXGroup;
+			children = (
+				C6C527022B87F9C800385A08 /* StackViewsWithSwitch.swift */,
+			);
+			path = Vews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +221,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					C67581772B6AEA4200B81616 = {
 						CreatedOnToolsVersion = 14.3.1;
@@ -255,9 +266,10 @@
 				C61603602B75762C00E1BC9E /* СreationDrinkView.swift in Sources */,
 				C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */,
 				C67581942B6E4CA800B81616 /* СreationDrinkViewController.swift in Sources */,
+				C6C527032B87F9C800385A08 /* StackViewsWithSwitch.swift in Sources */,
 				C6A3AC992B7C121B00853011 /* Builder.swift in Sources */,
 				C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */,
-				C67581922B6AFA4200B81616 /* NetworkManager.swift in Sources */,
+				C67581922B6AFA4200B81616 /* DataManager.swift in Sources */,
 				C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */,
 				C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */,
 				C6A28BD02B7FB60B00E31B52 /* Extensions + UILabel.swift in Sources */,
@@ -318,6 +330,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -378,6 +391,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
