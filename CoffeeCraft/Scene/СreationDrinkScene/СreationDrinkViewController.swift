@@ -14,6 +14,7 @@ final class СreationDrinkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = СreationDrinkView(frame: UIScreen.main.bounds)
+        setupNavController()
     }
     
     //MARK: - Methods
@@ -21,6 +22,25 @@ final class СreationDrinkViewController: UIViewController {
     func goRecipeDrinkVC() {
         let vc = RecipeDrinkViewController()
         vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
+
+//MARK: - Setup UI
+extension СreationDrinkViewController {
+    func setupNavController() {
+        title = "Сreation Drink"
+        
+        let navBarAppearance = UINavigationBarAppearance()
+       
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
+        navBarAppearance.backgroundColor = .brown
+        
+        navigationController?.navigationBar.standardAppearance = navBarAppearance
+        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
+       
+        navigationController?.navigationBar.tintColor = .black
+    }
+}
+

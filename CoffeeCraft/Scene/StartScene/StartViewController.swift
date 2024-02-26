@@ -20,7 +20,8 @@ final class StartViewController: UIViewController {
     @objc
     func goCreationDrinkVC() {
         let vc = СreationDrinkViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        let navigationVC = UINavigationController(rootViewController: vc)
+        navigationVC.modalPresentationStyle = .fullScreen
+        present(navigationVC, animated: true)
     }
 }
