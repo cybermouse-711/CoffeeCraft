@@ -9,7 +9,7 @@ import Foundation
 
 //MARK: - Created Drink
 struct Drink {
-    ///Способ приготовления кофе
+    ///Посуда для приготовления кофе
     let dishes: Dishes
     ///Тип кофе
     let type: TypeCoffee
@@ -86,19 +86,19 @@ struct TypeCoffee {
     var typeMilk: MilkCoffee?
     var typeBlack: BlackCoffee?
     
+    /*
     if milk == true {
         typeBlack = nil
     } else {
         typeMilk = nil
     }
+     */
     
-    /*
     var type: [String] {
         milk
         ? ["Macchiato", "Long Macchiato", "Cortado", "Breve", "Cappuccino", "Flat White", "Cafe Latte", "Mocha", "Vienna", "Affogato", "Cafe au Lait"]
         : ["Espresso", "Double Espresso", "Red Eye", "Black Eye", "Americano", "Long Black"]
     }
-    */
 }
 
 //MARK: - Coffee with milk
@@ -131,23 +131,15 @@ enum Degrees: String {
     case hot = "Hot"
 }
 
-//MARK: Extension for metods
-extension Drink {
-    
-    ///Функция которая принимает параметр способа приготовления и на его основании генерирует рецепт эспрессо
-    static func prepareEspresso() {
-        
-    }
-    ///Функция которая берет готовое эспрессо и генерирует на его основании рецепт выбранного кофе
-    static func prepareCoffee() {
-        
-    }
-    ///Функция которая берет характеристики выбранных опций и генерирует напиток
-    static func prepareDrink() {
-        
-    }
-    ///Функция которая выбрасывает рандомные исторические факты из массива
-    static func getRandomFact() {
-    //TODO: - Доработать метод
-    }
+//MARK: - Recipe Drink
+struct Recipe {
+    ///Приготовление эспрессо на основе посуды
+    let espresso: String
+    ///Приготовление определенного типа кофе на основе эспрессо
+    let coffee: String
+    ///Приготовление напитка на основе кофе
+    let drink: String
+    ///Изображение с посудой для кофе
+    let image: String
+
 }
