@@ -22,7 +22,7 @@
 		C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */; };
 		C6A3AC952B7C0A9A00853011 /* RecipeDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */; };
 		C6A3AC992B7C121B00853011 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC982B7C121B00853011 /* Builder.swift */; };
-		C6C527032B87F9C800385A08 /* StackViewsWithSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C527022B87F9C800385A08 /* StackViewsWithSwitch.swift */; };
+		C6AD9C2F2B91295E0074ABAD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD9C2E2B91295E0074ABAD /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkView.swift; sourceTree = "<group>"; };
 		C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkViewController.swift; sourceTree = "<group>"; };
 		C6A3AC982B7C121B00853011 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
-		C6C527022B87F9C800385A08 /* StackViewsWithSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackViewsWithSwitch.swift; sourceTree = "<group>"; };
+		C6AD9C2E2B91295E0074ABAD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +188,7 @@
 		C6C527042B87F9CD00385A08 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				C6C527022B87F9C800385A08 /* StackViewsWithSwitch.swift */,
+				C6AD9C2E2B91295E0074ABAD /* TableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -266,9 +266,9 @@
 				C61603602B75762C00E1BC9E /* СreationDrinkView.swift in Sources */,
 				C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */,
 				C67581942B6E4CA800B81616 /* СreationDrinkViewController.swift in Sources */,
-				C6C527032B87F9C800385A08 /* StackViewsWithSwitch.swift in Sources */,
 				C6A3AC992B7C121B00853011 /* Builder.swift in Sources */,
 				C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */,
+				C6AD9C2F2B91295E0074ABAD /* TableViewCell.swift in Sources */,
 				C67581922B6AFA4200B81616 /* DataManager.swift in Sources */,
 				C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */,
 				C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */,
