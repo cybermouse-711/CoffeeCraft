@@ -11,29 +11,13 @@ import UIKit
 final class СreationDrinkView: UIView {
     
     //MARK: - Private Properties
+    private let tableView = UITableView()
+    
     private let createButton = UIButton()
-    
-    private let creationLabels = [UILabel]()
-    
-//    private let drink: Drink!
-//    
-//    private let titles = ["\(drink.dishes)", "\(drink.milk)", "\(drink.type)", "\(drink.grinding)", "\(drink.variety)", "\(drink.roasting)", "\(drink.roasting)"]
+
+  //  private let drink: Drink!
   
-   // private let titles: [String] = ["dishes", "drink.milk", "type", "grinding", "variety", "roasting", "roasting"]
-    
-    private let dishesLabel = UILabel()
-    private let milkLabel = UILabel()
-    private let typeLabel = UILabel()
-    private let grindingLabel = UILabel()
-    private let varietyLabel = UILabel()
-    private let roastingLabel = UILabel()
-    private let temperatureLabel = UILabel()
-    private let sugarLabel = UILabel()
-    private let honeyLabel = UILabel()
-    private let spicesLabel = UILabel()
-    private let syrupLabel = UILabel()
-    
-    private let stackViewLabel = UIStackView()
+   private let titles: [String] = ["dishes", "drink.milk", "type", "grinding", "variety", "roasting", "roasting"]
     
     //MARK: - Init
     override init(frame: CGRect) {
@@ -55,20 +39,8 @@ private extension СreationDrinkView {
         setupConctraints()
         
         setupSelfView()
+        setupTableView()
         setupCreateButton()
-        setupStackViewLabel()
-  //      setupLabels()
-        setupDishesLabel()
-        setupMilkLabel()
-        setupTypeLabel()
-        setuphoneyLabel()
-        setupsugarLabel()
-        setupvarietyLabel()
-        setupgrindingLabel()
-        setuproastingLabel()
-        setuptemperatureLabel()
-        setupspicesLabel()
-        setupsyrupLabel()
     }
 }
 
@@ -79,8 +51,13 @@ private extension СreationDrinkView {
     }
     
     func addSubViews() {
+        addSubview(tableView)
         addSubview(createButton)
-        addSubview(stackViewLabel)
+    }
+    
+    func setupTableView() {
+        tableView.dataSource = self
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
     }
     
     func setupCreateButton() {
@@ -96,97 +73,49 @@ private extension СreationDrinkView {
             for: .touchUpInside
         )
     }
-    
-    func setupStackViewLabel(){
-        stackViewLabel.axis = .vertical
-        stackViewLabel.distribution = .fill
-        stackViewLabel.spacing = 20
-        
-        //        creationLabels.forEach { subView in
-        //            stackViewLabel.addArrangedSubview(subView)
-        //        }
-        //    }
-        //
-        //    func setupLabels() {
-        //        for (label, title) in zip(creationLabels, titles) {
-        //            label.getElementLabel(for: label, with: title)
-        //        }
-        //    }
-        
-        [dishesLabel, milkLabel, typeLabel, grindingLabel, varietyLabel, roastingLabel, roastingLabel, temperatureLabel, sugarLabel, honeyLabel, spicesLabel, syrupLabel
-        ].forEach { subView in
-            stackViewLabel.addArrangedSubview(subView)
-        }
-    }
-    
-    func setupDishesLabel() {
-        dishesLabel.getElementLabel(for: dishesLabel, with: "Dishes")
-    }
-    
-    func setupMilkLabel() {
-        milkLabel.getElementLabel(for: milkLabel, with: "Milk")
-    }
-    
-    func setupTypeLabel() {
-        typeLabel.getElementLabel(for: typeLabel, with: "Type")
-    }
-    
-    func setupgrindingLabel() {
-        grindingLabel.getElementLabel(for: grindingLabel, with: "Grinding")
-    }
-    
-    func setupvarietyLabel() {
-        varietyLabel.getElementLabel(for: varietyLabel, with: "Variety")
-    }
-    
-    func setuproastingLabel() {
-        roastingLabel.getElementLabel(for: roastingLabel, with: "Roasting")
-    }
-    
-    func setuptemperatureLabel() {
-        temperatureLabel.getElementLabel(for: temperatureLabel, with: "Temperature")
-    }
-    
-    func setupsugarLabel() {
-        sugarLabel.getElementLabel(for: sugarLabel, with: "Sugar")
-    }
-    
-    func setuphoneyLabel() {
-        honeyLabel.getElementLabel(for: honeyLabel, with: "Honey")
-    }
-    
-    func setupspicesLabel() {
-        spicesLabel.getElementLabel(for: spicesLabel, with: "Spices")
-    }
-    
-    func setupsyrupLabel() {
-        syrupLabel.getElementLabel(for: syrupLabel, with: "Syrup")
-    }
-}
+ }
 
 //MARK: - Constraints
 private extension СreationDrinkView {
     func setupConctraints() {
-        stackViewLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        tableView.translatesAutoresizingMaskIntoConstraints = false
         createButton.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            stackViewLabel.topAnchor.constraint(equalTo: topAnchor, constant: 100),
-            stackViewLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            stackViewLabel.widthAnchor.constraint(equalTo: widthAnchor, multiplier: 0.8),
+
+          //  tableView.heightAnchor.constraint(equalToConstant: 500),
+            tableView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
+            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
             
             createButton.widthAnchor.constraint(equalToConstant: 250),
             createButton.heightAnchor.constraint(equalToConstant: 70),
             createButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            createButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -100)
+            createButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -80)
         ])
     }
 }
 
-    //MARK: - Constants
-    private extension СreationDrinkView {
-        enum Constants {
-            static let createButtonTitle: String = "Recipe drink"
-        }
+//MARK: - UITableViewDataSource
+extension СreationDrinkView: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        titles.count
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        guard let cell = cell as? TableViewCell else { return UITableViewCell() }
+        let list = titles[indexPath.row]
+        cell.configure(list, true)
+        return cell
+    }
+}
+
+//MARK: - Constants
+private extension СreationDrinkView {
+    enum Constants {
+        static let createButtonTitle: String = "Drink recipe"
+    }
+}
+
