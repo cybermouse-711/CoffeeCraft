@@ -10,7 +10,7 @@ import UIKit
 //MARK: - СreationDrinkView
 final class СreationDrinkView: UIView {
     
-    //MARK: - Private Properties
+    //MARK: Private Properties
     private let tableView = UITableView()
     
     private let createButton = UIButton()
@@ -19,7 +19,7 @@ final class СreationDrinkView: UIView {
   
    private let titles: [String] = ["dishes", "drink.milk", "type", "grinding", "variety", "roasting", "roasting"]
     
-    //MARK: - Init
+    //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()
@@ -58,6 +58,8 @@ private extension СreationDrinkView {
     func setupTableView() {
         tableView.dataSource = self
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.rowHeight = 70
+        
     }
     
     func setupCreateButton() {
@@ -99,6 +101,10 @@ private extension СreationDrinkView {
 
 //MARK: - UITableViewDataSource
 extension СreationDrinkView: UITableViewDataSource {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        1
+       }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         titles.count
     }
@@ -115,7 +121,7 @@ extension СreationDrinkView: UITableViewDataSource {
 //MARK: - Constants
 private extension СreationDrinkView {
     enum Constants {
-        static let createButtonTitle: String = "Drink recipe"
+        static let createButtonTitle: String = "Create a recipe"
     }
 }
 
