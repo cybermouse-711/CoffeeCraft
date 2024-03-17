@@ -10,13 +10,13 @@ import UIKit
 //MARK: - StartViewController
 final class StartViewController: UIViewController {
     
-    //MARK: - Override Methods
+    //MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view = StartView(frame: UIScreen.main.bounds)
     }
     
-    //MARK: - Methods
+    //MARK: Methods
     @objc
     func goCreationDrinkVC() {
         let vc = СreationDrinkViewController()

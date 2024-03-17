@@ -10,10 +10,10 @@ import UIKit
 //MARK: - StartView
 final class StartView: UIView {
     
-    //MARK: - Private Properties
+    //MARK: Private Properties
     private let startButton = UIButton()
     
-    //MARK: - Init
+    //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupUI()

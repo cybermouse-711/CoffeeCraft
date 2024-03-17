@@ -10,7 +10,7 @@ import UIKit
 //MARK: - RecipeDrinkViewController
 final class RecipeDrinkViewController: UIViewController {
     
-    //MARK: - Override Methods
+    //MARK: Override Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         view = RecipeDrinkView(frame: UIScreen.main.bounds)

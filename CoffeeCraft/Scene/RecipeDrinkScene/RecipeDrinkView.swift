@@ -10,7 +10,7 @@ import UIKit
 //MARK: - RecipeDrinkView
 final class RecipeDrinkView: UIView {
     
-    //MARK: - Init
+    //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .brown

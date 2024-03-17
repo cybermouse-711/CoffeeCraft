@@ -20,8 +20,8 @@ final class TableViewCell: UITableViewCell {
  //   private var array = ["text"]
     
     //MARK: - Init
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
     }
     
@@ -61,7 +61,7 @@ private extension TableViewCell {
     }
     
     func setupCell() {
-        backgroundColor = .systemBrown
+        backgroundColor = .red
     }
     
     func setupLabel() {
