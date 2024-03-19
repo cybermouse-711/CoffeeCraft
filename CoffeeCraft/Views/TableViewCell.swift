@@ -13,11 +13,6 @@ final class TableViewCell: UITableViewCell {
     //MARK: - Private Properties
     private let label = UILabel()
     private let switchh = UISwitch()
- //   private let control = UIControl()
-    
-//   private var text = "text"
-//   private var isOn = false
- //   private var array = ["text"]
     
     //MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -47,7 +42,6 @@ private extension TableViewCell {
         setupCell()
         setupLabel()
         setupSwitch()
-  //      setupControl()
     }
 }
 
@@ -65,7 +59,6 @@ private extension TableViewCell {
     }
     
     func setupLabel() {
-     //  label.text = text
         label.textColor = .black
         label.font = UIFont.systemFont(ofSize: 25)
         label.textAlignment = .left
@@ -73,13 +66,8 @@ private extension TableViewCell {
     }
     
     func setupSwitch() {
-     // switchh.isOn = isOn
         switchh.onTintColor = .black
     }
-    
-//    func setupControl() {
-//        control.isEnabled = false
-//    }
 }
 
 //MARK: - Constraints
@@ -96,9 +84,7 @@ private extension TableViewCell {
             
             switchh.centerYAnchor.constraint(equalTo: centerYAnchor),
             switchh.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)
-            
-//            control.centerYAnchor.constraint(equalTo: centerYAnchor),
-//            control.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)
+
         ])
     }
 }
