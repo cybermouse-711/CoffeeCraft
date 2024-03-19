@@ -12,6 +12,7 @@
 		C626E7802BA5D6FE0021029B /* type_coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = C626E77F2BA5D6FE0021029B /* type_coffee.json */; };
 		C626E7822BA5DEE00021029B /* dishes.json in Resources */ = {isa = PBXBuildFile; fileRef = C626E7812BA5DEE00021029B /* dishes.json */; };
 		C626E7852BA6E5AD0021029B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C626E7842BA6E5AD0021029B /* StorageManager.swift */; };
+		C62D11222BA9E25000E67CF3 /* .gitignor in Resources */ = {isa = PBXBuildFile; fileRef = C62D11212BA9E25000E67CF3 /* .gitignor */; };
 		C662E01A2B7F8DF700548B44 /* Extensions + UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662E0192B7F8DF700548B44 /* Extensions + UIButton.swift */; };
 		C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817B2B6AEA4200B81616 /* AppDelegate.swift */; };
 		C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817D2B6AEA4200B81616 /* SceneDelegate.swift */; };
@@ -32,6 +33,7 @@
 		C626E77F2BA5D6FE0021029B /* type_coffee.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = type_coffee.json; sourceTree = "<group>"; };
 		C626E7812BA5DEE00021029B /* dishes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dishes.json; sourceTree = "<group>"; };
 		C626E7842BA6E5AD0021029B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		C62D11212BA9E25000E67CF3 /* .gitignor */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignor; sourceTree = "<group>"; };
 		C662E0192B7F8DF700548B44 /* Extensions + UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIButton.swift"; sourceTree = "<group>"; };
 		C67581782B6AEA4200B81616 /* CoffeeCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C675817B2B6AEA4200B81616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			children = (
 				C67581892B6AEA4300B81616 /* Info.plist */,
 				C67581842B6AEA4300B81616 /* Assets.xcassets */,
+				C62D11212BA9E25000E67CF3 /* .gitignor */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				C67581882B6AEA4300B81616 /* LaunchScreen.storyboard in Resources */,
 				C626E7802BA5D6FE0021029B /* type_coffee.json in Resources */,
+				C62D11222BA9E25000E67CF3 /* .gitignor in Resources */,
 				C67581852B6AEA4300B81616 /* Assets.xcassets in Resources */,
 				C626E7822BA5DEE00021029B /* dishes.json in Resources */,
 			);
