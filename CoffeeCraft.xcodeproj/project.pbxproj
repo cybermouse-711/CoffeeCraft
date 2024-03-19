@@ -131,25 +131,25 @@
 			isa = PBXGroup;
 			children = (
 				C662E01C2B7F8E1F00548B44 /* App */,
-				C67581992B6E9D5B00B81616 /* Scene */,
+				C67581992B6E9D5B00B81616 /* Scenes */,
 				C662E01B2B7F8E0100548B44 /* Extensions */,
 				C6C527042B87F9CD00385A08 /* Views */,
 				C6A3AC9A2B7C121F00853011 /* Builders */,
 				C675819A2B6E9D6A00B81616 /* Models */,
 				C626E7862BA6E5B20021029B /* Services */,
 				C626E7832BA5EC4F0021029B /* JSONs */,
-				C67581972B6E9D2000B81616 /* Storiboard */,
+				C67581972B6E9D2000B81616 /* Storiboards */,
 				C67581982B6E9D4100B81616 /* Supports */,
 			);
 			path = CoffeeCraft;
 			sourceTree = "<group>";
 		};
-		C67581972B6E9D2000B81616 /* Storiboard */ = {
+		C67581972B6E9D2000B81616 /* Storiboards */ = {
 			isa = PBXGroup;
 			children = (
 				C67581862B6AEA4300B81616 /* LaunchScreen.storyboard */,
 			);
-			path = Storiboard;
+			path = Storiboards;
 			sourceTree = "<group>";
 		};
 		C67581982B6E9D4100B81616 /* Supports */ = {
@@ -161,14 +161,14 @@
 			path = Supports;
 			sourceTree = "<group>";
 		};
-		C67581992B6E9D5B00B81616 /* Scene */ = {
+		C67581992B6E9D5B00B81616 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				C616035B2B75737E00E1BC9E /* StartScene */,
 				C616035E2B75761500E1BC9E /* СreationDrinkScene */,
 				C6A3AC972B7C0AE100853011 /* RecipeDrinkScene */,
 			);
-			path = Scene;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		C675819A2B6E9D6A00B81616 /* Models */ = {
