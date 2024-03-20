@@ -11,13 +11,12 @@ import UIKit
 final class СreationDrinkView: UIView {
     
     //MARK: Private Properties
-    private let tableView = UITableView()
-    
+    private let tableView = UITableView(frame: .zero, style: .grouped)
     private let createButton = UIButton()
 
   //  private let drink: Drink!
   
-   private let titles: [String] = ["dishes", "drink.milk", "type", "grinding", "variety", "roasting", "roasting"]
+   private let titles: [String] = ["dishes", "milk", "type", "grinding", "variety", "roasting"]
     
     //MARK: Init
     override init(frame: CGRect) {
@@ -38,8 +37,8 @@ private extension СreationDrinkView {
         
         setupConctraints()
         
-        setupSelfView()
         setupTableView()
+        setupSelfView()
         setupCreateButton()
     }
 }
@@ -56,9 +55,14 @@ private extension СreationDrinkView {
     }
     
     func setupTableView() {
+        tableView.backgroundColor = .systemBrown
+        
         tableView.dataSource = self
-        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        tableView.rowHeight = 70
+        tableView.delegate = self
+        
+        tableView.register(TableViewCell.self, forCellReuseIdentifier: "Cell")
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 44
         
     }
     
@@ -86,10 +90,10 @@ private extension СreationDrinkView {
         
         NSLayoutConstraint.activate([
 
-          //  tableView.heightAnchor.constraint(equalToConstant: 500),
-            tableView.topAnchor.constraint(equalTo: topAnchor, constant: 20),
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
+            tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
+            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -350),
             
             createButton.widthAnchor.constraint(equalToConstant: 250),
             createButton.heightAnchor.constraint(equalToConstant: 70),
@@ -101,6 +105,7 @@ private extension СreationDrinkView {
 
 //MARK: - UITableViewDataSource
 extension СreationDrinkView: UITableViewDataSource {
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         1
        }
@@ -111,12 +116,25 @@ extension СreationDrinkView: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        guard let cell = cell as? TableViewCell else { return UITableViewCell() }
-        let list = titles[indexPath.row]
-        cell.configure(list, true)
-        return cell
+        
+        guard let customCell = cell as? TableViewCell else { return UITableViewCell() }
+        let text = titles[indexPath.row]
+        customCell.configure(text, false)
+        
+        return customCell
     }
+    
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+//        guard let cell = cell as? TableViewCell else { return UITableViewCell() }
+//        let list = titles[indexPath.row]
+//        cell.configure(list, true)
+//        return cell
+//    }
 }
+
+//MARK: - UITableViewDelegate
+extension СreationDrinkView: UITableViewDelegate {}
 
 //MARK: - Constants
 private extension СreationDrinkView {
