@@ -7,7 +7,26 @@
 
 import Foundation
 
-//MARK: - Created Drink
+//MARK: - Dishes for JSON
+struct Dishes: Decodable {
+    let id: String
+    let dishes: String
+    let grinding: [String]
+    let shots: Int
+    let recipe: String
+}
+
+//MARK: - TypeCoffee for JSON
+struct TypeCoffee: Decodable {
+    let id: String
+    let milk: Bool
+    let type: String
+    let shots: Int
+    let recipe: String
+    let fact: String
+}
+
+//MARK: - Created Drink for Scene
 struct Drink {
     ///Посуда для приготовления кофе
     let dishes: Dishes
@@ -17,8 +36,10 @@ struct Drink {
     let variety: Grains
     ///Обжарка зерен
     let roasting: Roasting
-    ///Температура напитка
-    let temperature: Degrees
+    ///Тонкость помола
+    let grinding: Dishes
+    ///Молоко
+    let milk: TypeCoffee
     ///Добавить сахар
     let sugar = false
     ///Добавить  мед
@@ -27,39 +48,12 @@ struct Drink {
     let spices = false
     ///Добавить сироп
     let syrup = false
-
-    ///Тонкость помола
-    var grinding: [String] {
-        switch dishes {
-        case Dishes.cezve:
-            return ["Extra fine"]
-        case Dishes.espressoMachine:
-            return ["Fine"]
-        case Dishes.filter:
-            return ["Medium"]
-        case Dishes.frenchPress:
-            return ["Medium", "Coarse"]
-        case Dishes.mokaPot:
-            return ["Fine", "Medium"]
-        }
-    }
+    ///Температура напитка
+    let ice = false
+    
 }
 
-//MARK: - Coffee preparation method
-enum Dishes: String {
-    ///Турка
-    case cezve = "Cezve"
-    ///Гейзерная
-    case mokaPot = "Moka Pot"
-    ///Кофемашина
-    case espressoMachine = "Espresso Machine"
-    ///Френч пресс
-    case frenchPress = "French Press"
-    ///Фильтр
-    case filter = "Filter"
-}
-
-//MARK: - Coffee grains
+//MARK: Coffee grains
 enum Grains: String {
     case arabica = "Arabica"
     case robusta = "Robusta"
@@ -69,7 +63,7 @@ enum Grains: String {
     case defalt = "Default"
 }
 
-//MARK: - Roasting beans
+//MARK: Roasting beans
 enum Roasting: String {
     case light = "Light"
     case medium = "Medium"
@@ -79,67 +73,20 @@ enum Roasting: String {
     case defalt = "Default"
 }
 
-//MARK: - Coffee type
-struct TypeCoffee {
-    var milk = true
-    
-    var typeMilk: MilkCoffee?
-    var typeBlack: BlackCoffee?
-    
-    /*
-    if milk == true {
-        typeBlack = nil
-    } else {
-        typeMilk = nil
-    }
-     */
-    
-    var type: [String] {
-        milk
-        ? ["Macchiato", "Long Macchiato", "Cortado", "Breve", "Cappuccino", "Flat White", "Cafe Latte", "Mocha", "Vienna", "Affogato", "Cafe au Lait"]
-        : ["Espresso", "Double Espresso", "Red Eye", "Black Eye", "Americano", "Long Black"]
-    }
-}
-
-//MARK: - Coffee with milk
-enum MilkCoffee: String {
-   case macchiato = "Macchiato"
-   case cortado = "Cortado"
-   case breve = "Breve"
-   case cappuccino = "Cappuccino"
-   case flatWhite = "Flat White"
-   case cafeLatte = "Cafe Latte"
-   case mocha = "Mocha"
-   case vienna = "Vienna"
-   case affogato = "Affogato"
-   case cafeLait = "Cafe au Lait"
-}
-
-//MARK: - Coffee not milk
-enum BlackCoffee: String {
-    case espresso = "Espresso"
-    case doubleEspresso = "Double Espresso"
-    case redEye = "Red Eye"
-    case blackEye = "Black Eye"
-    case americano = "Americano"
-    case longBlack = "Long Black"
-}
-
-//MARK: - Beverage temperature
-enum Degrees: String {
-    case ice = "Ice"
-    case hot = "Hot"
-}
-
-//MARK: - Recipe Drink
+//MARK: - Recipe Drink for Scene
 struct Recipe {
     ///Приготовление эспрессо на основе посуды
-    let espresso: String
+    let espresso: Dishes
+    ///Количество полученных порций эспрессо
+    let shotsEspresso: Dishes
     ///Приготовление определенного типа кофе на основе эспрессо
-    let coffee: String
+    let coffee: TypeCoffee
+    ///Количество порций эспрессо для приготовления напитка
+    let shotsCoffee: TypeCoffee
     ///Приготовление напитка на основе кофе
     let drink: String
-    ///Изображение с посудой для кофе
-    let image: String
-
+//    ///Изображение с посудой для кофе
+//    let image: String
+    ///Факт о кофе
+    let fact: TypeCoffee
 }
