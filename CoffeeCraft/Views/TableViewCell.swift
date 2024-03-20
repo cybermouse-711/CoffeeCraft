@@ -11,8 +11,8 @@ import UIKit
 final class TableViewCell: UITableViewCell {
     
     //MARK: - Private Properties
-    private let label = UILabel()
-    private let switchh = UISwitch()
+    private let titleIngredient = UILabel()
+    private let switchIngredient = UISwitch()
     
     //MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -27,8 +27,8 @@ final class TableViewCell: UITableViewCell {
     
     //MARK: - Metods
     func configure(_ text: String, _ isOn: Bool ) {
-        label.text = text
-        switchh.isOn = isOn
+        titleIngredient.text = text
+        switchIngredient.isOn = isOn
     }
 }
 
@@ -49,24 +49,25 @@ private extension TableViewCell {
 private extension TableViewCell {
     
     func addSubview() {
-        [label, switchh].forEach {
+        [titleIngredient, switchIngredient].forEach {
             addSubview($0)
         }
     }
     
     func setupCell() {
-        backgroundColor = .red
+        backgroundColor = .systemBrown
     }
     
     func setupLabel() {
-        label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 25)
-        label.textAlignment = .left
-        label.numberOfLines = 1
+        titleIngredient.textColor = .black
+        titleIngredient.font = UIFont.systemFont(ofSize: 25)
+        titleIngredient.textAlignment = .left
+        titleIngredient.numberOfLines = 1
     }
     
     func setupSwitch() {
-        switchh.onTintColor = .black
+        switchIngredient.onTintColor = .brown
+        switchIngredient.thumbTintColor = .brown
     }
 }
 
@@ -74,16 +75,16 @@ private extension TableViewCell {
 private extension TableViewCell {
     func setupConctraints() {
         
-        [label, switchh].forEach {
+        [titleIngredient, switchIngredient].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
         NSLayoutConstraint.activate([ 
-            label.centerYAnchor.constraint(equalTo: centerYAnchor),
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            titleIngredient.centerYAnchor.constraint(equalTo: centerYAnchor),
+            titleIngredient.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             
-            switchh.centerYAnchor.constraint(equalTo: centerYAnchor),
-            switchh.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)
+            switchIngredient.centerYAnchor.constraint(equalTo: centerYAnchor),
+            switchIngredient.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)
 
         ])
     }
