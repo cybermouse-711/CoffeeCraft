@@ -2,36 +2,36 @@
     {
         "id": "cezve",
         "dishes": "Cezve",
-        "grinding": ["Extra fine"],
-        "portions": 2,
+        "grinding": ["Extra fine", "Default"],
+        "shots": 2,
         "recipe": "Pour the water into the cezve. Add the 2 tablespoons coffee and sugar, if using. Mix well to dissolve the coffee and sugar. Do not stir after this point. Place the cezve on the stovetop over medium heat. After a few minutes, the coffee will rise and foam up. Just before it begins to boil, remove the cezve from the heat. Skim off the foam, adding a little to each serving cup. Return the cezve to the heat and let it slowly foam up again. Pour the coffee very slowly into the serving cups so the foam rises to the top. Let the coffee settle for a few minutes."
     },
     {
         "id": "moka_pot",
         "dishes": "Moka Pot",
-        "grinding": ["Fine", "Medium"],
-        "portions": 2,
+        "grinding": ["Fine", "Medium", "Default"],
+        "shots": 2,
         "recipe": "Set your kettle to boil, or, if you’re using a temperature controlled kettle. Add your heated water to the bottom of the Moka pot, filling to the line inside the carafe. Put the metal filter basket into the brewer and place it on the scale. Tare your scale and add 3 tablespoons of freshly ground coffee into the filter. Use your finger to level out the grounds, or, using a heat-resistant towel, give it a gentle shake to level out the grounds. Remove the brewer from the scale. Screw the top and bottom together using a heat-resistant towel. Turn on your heat source to medium-low and put the Moka pot on top. Leave the top lid open. The coffee will begin to come out of the spout. Close the lid. When you hear a hissing sound, remove the Moka pot from the heat source and allow the coffee to finish brewing."
     },
     {
         "id": "espresso_machine",
         "dishes": "Espresso Machine",
-        "grinding": ["Fine"],
-        "portions": 1,
+        "grinding": ["Fine", "Default"],
+        "shots": 1,
         "recipe": "Measure 1 tablespoon or 9g of beans for a single shot. Tamp horizontally and straight and place the watercup onto the (naked)portafilter. Fill 30 ml boiled water till first marker line (the ideal temperature for espresso is 95° C). Slide the combination into the Superkop. Pull the lever 6 times in 25-30 seconds…don’t go too fast. Pour the shot into a preheated cup."
     },
     {
         "id": "french_press",
         "dishes": "French Press",
-        "grinding": ["Medium", "Coarse"],
-        "portions": 1,
+        "grinding": ["Medium", "Coarse", "Default"],
+        "shots": 1,
         "recipe": "Heat 2 ounces of water water to hot but not boiling 90-95°C. Add 1 tablespoon or 9g of beans coffee to the French press. Top with the hot water and stir. Set a timer and wait 4 minutes. Place the lid on the French press and slowly press on the plunger all the way down. Pump the plunger several times to create crema. Then press the plunger all the way down."
     },
     {
         "id": "filter",
         "dishes": "Filter",
-        "grinding": ["Medium"],
-        "portions": 1,
+        "grinding": ["Medium", "Default"],
+        "shots": 1,
         "recipe": "The best temperature for brewing coffee is 95°C, it will be in the kettle about a minute after it stops boiling. Insert the filter and wet it generously with hot water. Pour out this water so as not to get a papery taste in your coffee. Pour 1 tablespoon or 9g of coffee into the filter and smooth the layer.Gently pour in a little water (about 50 ml) to “wake up” the coffee. Wait 50 seconds. Spill the water in a diverging spiral. Maintain the same level of water in the filter so that the coffee brewing temperature remains constant."
     }
 }
