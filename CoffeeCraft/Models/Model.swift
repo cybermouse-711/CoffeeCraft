@@ -8,6 +8,7 @@
 import Foundation
 
 //MARK: - Dishes for JSON
+///Модель для парсинга JSON с типом посуды
 struct Dishes: Decodable {
     let id: String
     let dishes: String
@@ -17,6 +18,7 @@ struct Dishes: Decodable {
 }
 
 //MARK: - TypeCoffee for JSON
+///Модель для парсинга JSON с рецептом кофе
 struct TypeCoffee: Decodable {
     let id: String
     let milk: Bool
@@ -27,6 +29,7 @@ struct TypeCoffee: Decodable {
 }
 
 //MARK: - Created Drink for Scene
+///Модель для формирования экрана с выбором опций
 struct Drink {
     ///Посуда для приготовления кофе
     let dishes: Dishes
@@ -74,6 +77,7 @@ enum Roasting: String {
 }
 
 //MARK: - Recipe Drink for Scene
+///Модель для формирования экрана с рецептом
 struct Recipe {
     ///Приготовление эспрессо на основе посуды
     let espresso: Dishes
