@@ -85,11 +85,11 @@
 		C616035E2B75761500E1BC9E /* СreationDrink */ = {
 			isa = PBXGroup;
 			children = (
-				C68197B42BCF00BF002E484B /* СreationDrinkScene */,
-				C68197B72BCF012D002E484B /* СreationDrinkPresenter.swift */,
 				C68197B92BCF015B002E484B /* СreationDrinkInteractor.swift */,
+				C68197B72BCF012D002E484B /* СreationDrinkPresenter.swift */,
 				C68197B52BCF0117002E484B /* СreationDrinkConfigurator.swift */,
 				C68197B22BCF0070002E484B /* CreationDrinkModel.swift */,
+				C68197B42BCF00BF002E484B /* СreationDrinkScene */,
 			);
 			path = "СreationDrink";
 			sourceTree = "<group>";
