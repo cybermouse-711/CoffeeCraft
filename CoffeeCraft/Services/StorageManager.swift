@@ -7,15 +7,20 @@
 
 import Foundation
 
+//MARK: - Protocols
+protocol IStorageManager {
+    func fetchData<T: Decodable>(_ type: T.Type, _ file: String, _ extensionFile: String, completion: @escaping(Result<T, Error>) -> Void)
+}
+
 //MARK: - StorageManager
 final class StorageManager {
-    static let shared = StorageManager()
     
     private let jsonDecoder = JSONDecoder()
-    
-    private init() {}
-    
-    func fetchData<T: Decodable>(_ type: T.Type, _ file: String, _ extensionFile: String, completion: @escaping(Result<T, Error>) -> Void) {
+}
+
+//MARK: - Extensions
+extension StorageManager: IStorageManager {
+    func fetchData<T>(_ type: T.Type, _ file: String, _ extensionFile: String, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
         guard let url = Bundle.main.url(forResource: file, withExtension: extensionFile) else { return }
         
         do {
