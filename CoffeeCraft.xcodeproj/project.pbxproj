@@ -36,6 +36,8 @@
 		C68197CF2BD84E58002E484B /* RecipeDrinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197CE2BD84E58002E484B /* RecipeDrinkModel.swift */; };
 		C68197D12BD84E71002E484B /* RecipeDrinkConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197D02BD84E71002E484B /* RecipeDrinkConfigurator.swift */; };
 		C68197D32BD84E8F002E484B /* RecipeDrinkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197D22BD84E8F002E484B /* RecipeDrinkPresenter.swift */; };
+		C68197D62BD85108002E484B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C68197D52BD85108002E484B /* SnapKit */; };
+		C68197D82BD85108002E484B /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C68197D72BD85108002E484B /* SnapKit-Dynamic */; };
 		C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */; };
 		C6A3AC952B7C0A9A00853011 /* RecipeDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */; };
 		C6A3AC992B7C121B00853011 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC982B7C121B00853011 /* Builder.swift */; };
@@ -85,6 +87,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68197D62BD85108002E484B /* SnapKit in Frameworks */,
+				C68197D82BD85108002E484B /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +296,10 @@
 			dependencies = (
 			);
 			name = CoffeeCraft;
+			packageProductDependencies = (
+				C68197D52BD85108002E484B /* SnapKit */,
+				C68197D72BD85108002E484B /* SnapKit-Dynamic */,
+			);
 			productName = CoffeeCraft;
 			productReference = C67581782B6AEA4200B81616 /* CoffeeCraft.app */;
 			productType = "com.apple.product-type.application";
@@ -320,6 +328,9 @@
 				Base,
 			);
 			mainGroup = C675816F2B6AEA4200B81616;
+			packageReferences = (
+				C68197D42BD85108002E484B /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = C67581792B6AEA4200B81616 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -594,6 +605,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C68197D42BD85108002E484B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C68197D52BD85108002E484B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C68197D42BD85108002E484B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		C68197D72BD85108002E484B /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C68197D42BD85108002E484B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C67581702B6AEA4200B81616 /* Project object */;
 }
