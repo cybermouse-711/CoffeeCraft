@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 //MARK: - СreationDrinkView
 final class СreationDrinkView: UIView {
@@ -83,21 +84,19 @@ private extension СreationDrinkView {
 private extension СreationDrinkView {
     func setupConctraints() {
         
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        createButton.translatesAutoresizingMaskIntoConstraints = false
+        tableView.snp.makeConstraints { make in
+            make.top.equalTo(safeAreaLayoutGuide)
+            make.trailing.equalTo(safeAreaLayoutGuide)
+            make.leading.equalTo(safeAreaLayoutGuide)
+            make.bottom.equalTo(createButton).offset(-350)
+        }
         
-        NSLayoutConstraint.activate([
-
-            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
-            tableView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -350),
-            
-            createButton.widthAnchor.constraint(equalToConstant: 250),
-            createButton.heightAnchor.constraint(equalToConstant: 70),
-            createButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            createButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -80)
-        ])
+        createButton.snp.makeConstraints { make in
+            make.height.equalTo(70)
+            make.width.equalTo(250)
+            make.centerX.equalTo(self)
+            make.bottom.equalTo(self).offset(-80)
+        }
     }
 }
 

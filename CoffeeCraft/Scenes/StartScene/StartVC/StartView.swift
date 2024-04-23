@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 //MARK: - StartView
 final class StartView: UIView {
@@ -65,14 +66,12 @@ private extension StartView {
 //MARK: - Constraints
 private extension StartView {
     func setupConctraints() {
-        startButton.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            startButton.widthAnchor.constraint(equalToConstant: 250),
-            startButton.heightAnchor.constraint(equalToConstant: 70),
-            startButton.centerXAnchor.constraint(equalTo: centerXAnchor),
-            startButton.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
+        startButton.snp.makeConstraints { make in
+            make.height.equalTo(70)
+            make.width.equalTo(250)
+            make.centerX.equalTo(self)
+            make.centerY.equalTo(self)
+        }
     }
 }
 
