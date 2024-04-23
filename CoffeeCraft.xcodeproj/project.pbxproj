@@ -27,6 +27,11 @@
 		C68197BA2BCF015B002E484B /* СreationDrinkInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197B92BCF015B002E484B /* СreationDrinkInteractor.swift */; };
 		C68197BC2BD6F6DF002E484B /* СreationDrinkRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197BB2BD6F6DF002E484B /* СreationDrinkRouter.swift */; };
 		C68197BE2BD6F760002E484B /* MVXProtocole.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197BD2BD6F760002E484B /* MVXProtocole.swift */; };
+		C68197C12BD8483D002E484B /* StartRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197C02BD8483D002E484B /* StartRouter.swift */; };
+		C68197C32BD8485F002E484B /* StartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197C22BD8485F002E484B /* StartModel.swift */; };
+		C68197C52BD84892002E484B /* StartConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197C42BD84892002E484B /* StartConfigurator.swift */; };
+		C68197C72BD848B2002E484B /* StartPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197C62BD848B2002E484B /* StartPresenter.swift */; };
+		C68197C92BD848C7002E484B /* StartInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197C82BD848C7002E484B /* StartInteractor.swift */; };
 		C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */; };
 		C6A3AC952B7C0A9A00853011 /* RecipeDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */; };
 		C6A3AC992B7C121B00853011 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC982B7C121B00853011 /* Builder.swift */; };
@@ -56,6 +61,11 @@
 		C68197B92BCF015B002E484B /* СreationDrinkInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СreationDrinkInteractor.swift"; sourceTree = "<group>"; };
 		C68197BB2BD6F6DF002E484B /* СreationDrinkRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СreationDrinkRouter.swift"; sourceTree = "<group>"; };
 		C68197BD2BD6F760002E484B /* MVXProtocole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVXProtocole.swift; sourceTree = "<group>"; };
+		C68197C02BD8483D002E484B /* StartRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartRouter.swift; sourceTree = "<group>"; };
+		C68197C22BD8485F002E484B /* StartModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartModel.swift; sourceTree = "<group>"; };
+		C68197C42BD84892002E484B /* StartConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartConfigurator.swift; sourceTree = "<group>"; };
+		C68197C62BD848B2002E484B /* StartPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartPresenter.swift; sourceTree = "<group>"; };
+		C68197C82BD848C7002E484B /* StartInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartInteractor.swift; sourceTree = "<group>"; };
 		C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkView.swift; sourceTree = "<group>"; };
 		C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkViewController.swift; sourceTree = "<group>"; };
 		C6A3AC982B7C121B00853011 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -76,8 +86,11 @@
 		C616035B2B75737E00E1BC9E /* StartScene */ = {
 			isa = PBXGroup;
 			children = (
-				C675817F2B6AEA4200B81616 /* StartViewController.swift */,
-				C616035C2B7573A600E1BC9E /* StartView.swift */,
+				C68197C82BD848C7002E484B /* StartInteractor.swift */,
+				C68197C62BD848B2002E484B /* StartPresenter.swift */,
+				C68197C42BD84892002E484B /* StartConfigurator.swift */,
+				C68197C22BD8485F002E484B /* StartModel.swift */,
+				C68197BF2BD8480A002E484B /* Start */,
 			);
 			path = StartScene;
 			sourceTree = "<group>";
@@ -207,6 +220,16 @@
 			path = "СreationDrinkScene";
 			sourceTree = "<group>";
 		};
+		C68197BF2BD8480A002E484B /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				C675817F2B6AEA4200B81616 /* StartViewController.swift */,
+				C616035C2B7573A600E1BC9E /* StartView.swift */,
+				C68197C02BD8483D002E484B /* StartRouter.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
 		C6A3AC972B7C0AE100853011 /* RecipeDrinkScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -307,12 +330,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61603602B75762C00E1BC9E /* СreationDrinkView.swift in Sources */,
+				C68197C92BD848C7002E484B /* StartInteractor.swift in Sources */,
 				C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */,
 				C67581942B6E4CA800B81616 /* СreationDrinkViewController.swift in Sources */,
 				C6A3AC992B7C121B00853011 /* Builder.swift in Sources */,
 				C68197BE2BD6F760002E484B /* MVXProtocole.swift in Sources */,
 				C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */,
+				C68197C12BD8483D002E484B /* StartRouter.swift in Sources */,
+				C68197C32BD8485F002E484B /* StartModel.swift in Sources */,
+				C68197C52BD84892002E484B /* StartConfigurator.swift in Sources */,
 				C6AD9C2F2B91295E0074ABAD /* TableViewCell.swift in Sources */,
+				C68197C72BD848B2002E484B /* StartPresenter.swift in Sources */,
 				C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */,
 				C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */,
 				C6A3AC952B7C0A9A00853011 /* RecipeDrinkViewController.swift in Sources */,
