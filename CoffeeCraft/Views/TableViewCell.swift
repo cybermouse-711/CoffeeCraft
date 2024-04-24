@@ -55,19 +55,19 @@ private extension TableViewCell {
     }
     
     func setupCell() {
-        backgroundColor = .systemBrown
+        backgroundColor = UIColor(named: ColorSet.lightGray)
     }
     
     func setupLabel() {
-        titleIngredient.textColor = .black
+        titleIngredient.textColor = UIColor(named: ColorSet.black)
         titleIngredient.font = UIFont.systemFont(ofSize: 25)
         titleIngredient.textAlignment = .left
         titleIngredient.numberOfLines = 1
     }
     
     func setupSwitch() {
-        switchIngredient.onTintColor = .brown
-        switchIngredient.thumbTintColor = .brown
+        switchIngredient.onTintColor = UIColor(named: ColorSet.brown)
+        switchIngredient.thumbTintColor = UIColor(named: ColorSet.brown)
     }
 }
 

@@ -45,7 +45,7 @@ private extension СreationDrinkView {
 //MARK: - Setup UI
 private extension СreationDrinkView {
     func setupSelfView(){
-        backgroundColor = .systemBrown
+        backgroundColor = UIColor(named: ColorSet.lightGray)
     }
     
     func addSubViews() {
@@ -54,7 +54,7 @@ private extension СreationDrinkView {
     }
     
     func setupTableView() {
-        tableView.backgroundColor = .systemBrown
+        tableView.backgroundColor = UIColor(named: ColorSet.lightGray)
         
         tableView.dataSource = self
         tableView.delegate = self
@@ -66,10 +66,11 @@ private extension СreationDrinkView {
     }
     
     func setupCreateButton() {
-        createButton.setTitle(Constants.createButtonTitle, for: .normal)
+        createButton.setTitle(Titles.createButton, for: .normal)
         createButton.setTitleColor(.black, for: .normal)
         createButton.layer.cornerRadius = 30
-        createButton.backgroundColor = .white
+        createButton.backgroundColor = UIColor(named: ColorSet.brown)
+        createButton.setTitleColor(UIColor(named: ColorSet.black), for: .normal)
         createButton.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         
         createButton.addTarget(
@@ -133,10 +134,4 @@ extension СreationDrinkView: UITableViewDataSource {
 //MARK: - UITableViewDelegate
 extension СreationDrinkView: UITableViewDelegate {}
 
-//MARK: - Constants
-private extension СreationDrinkView {
-    enum Constants {
-        static let createButtonTitle: String = "Create a recipe"
-    }
-}
 

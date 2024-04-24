@@ -42,18 +42,18 @@ final class СreationDrinkViewController: UIViewController {
 //MARK: - Setup UI
 extension СreationDrinkViewController {
     func setupNavController() {
-        title = "Сreation Drink"
+        title = Titles.navBar
         
         let navBarAppearance = UINavigationBarAppearance()
        
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.black]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.black]
-        navBarAppearance.backgroundColor = .brown
+        navBarAppearance.backgroundColor = UIColor(named: ColorSet.darkGray)
         
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
        
-        navigationController?.navigationBar.tintColor = .black
+        navigationController?.navigationBar.tintColor = UIColor(named: ColorSet.gray)
     }
 }
 

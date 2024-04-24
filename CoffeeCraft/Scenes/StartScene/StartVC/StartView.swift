@@ -41,7 +41,7 @@ private extension StartView {
 //MARK: - Setup UI
 private extension StartView {
     func setupSelfView() {
-        backgroundColor = .brown
+        backgroundColor = UIColor(named: ColorSet.lightGray)
     }
     
     func addSubViews() {
@@ -49,10 +49,11 @@ private extension StartView {
     }
     
     func setupStartButton(){
-        startButton.setTitle(Constants.startButtonTitle, for: .normal)
+        startButton.setTitle(Titles.startButton, for: .normal)
         startButton.setTitleColor(.black, for: .normal)
         startButton.layer.cornerRadius = 30
-        startButton.backgroundColor = .white
+        startButton.backgroundColor = UIColor(named: ColorSet.brown)
+        startButton.setTitleColor(UIColor(named: ColorSet.white), for: .normal)
         startButton.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         
         startButton.addTarget(
@@ -72,12 +73,5 @@ private extension StartView {
             make.centerX.equalTo(self)
             make.centerY.equalTo(self)
         }
-    }
-}
-
-//MARK: - Constants
-private extension StartView {
-    enum Constants {
-        static let startButtonTitle: String = "Create a drink"
     }
 }

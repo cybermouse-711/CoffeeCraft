@@ -38,6 +38,7 @@
 		C68197D32BD84E8F002E484B /* RecipeDrinkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197D22BD84E8F002E484B /* RecipeDrinkPresenter.swift */; };
 		C68197D62BD85108002E484B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C68197D52BD85108002E484B /* SnapKit */; };
 		C68197D82BD85108002E484B /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C68197D72BD85108002E484B /* SnapKit-Dynamic */; };
+		C68197DA2BD96655002E484B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197D92BD96655002E484B /* Constants.swift */; };
 		C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */; };
 		C6A3AC952B7C0A9A00853011 /* RecipeDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */; };
 		C6A3AC992B7C121B00853011 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC982B7C121B00853011 /* Builder.swift */; };
@@ -76,6 +77,7 @@
 		C68197CE2BD84E58002E484B /* RecipeDrinkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkModel.swift; sourceTree = "<group>"; };
 		C68197D02BD84E71002E484B /* RecipeDrinkConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkConfigurator.swift; sourceTree = "<group>"; };
 		C68197D22BD84E8F002E484B /* RecipeDrinkPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkPresenter.swift; sourceTree = "<group>"; };
+		C68197D92BD96655002E484B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkView.swift; sourceTree = "<group>"; };
 		C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkViewController.swift; sourceTree = "<group>"; };
 		C6A3AC982B7C121B00853011 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 			children = (
 				C662E01C2B7F8E1F00548B44 /* App */,
 				C67581992B6E9D5B00B81616 /* Scenes */,
+				C68197DB2BD96A28002E484B /* Helpers */,
 				C662E01B2B7F8E0100548B44 /* Extensions */,
 				C6C527042B87F9CD00385A08 /* Views */,
 				C6A3AC9A2B7C121F00853011 /* Builders */,
@@ -249,6 +252,14 @@
 				C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */,
 			);
 			path = RecipeDrinkVC;
+			sourceTree = "<group>";
+		};
+		C68197DB2BD96A28002E484B /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C68197D92BD96655002E484B /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C6A3AC972B7C0AE100853011 /* RecipeDrinkScene */ = {
@@ -365,6 +376,7 @@
 				C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */,
 				C67581942B6E4CA800B81616 /* СreationDrinkViewController.swift in Sources */,
 				C68197CF2BD84E58002E484B /* RecipeDrinkModel.swift in Sources */,
+				C68197DA2BD96655002E484B /* Constants.swift in Sources */,
 				C68197D32BD84E8F002E484B /* RecipeDrinkPresenter.swift in Sources */,
 				C6A3AC992B7C121B00853011 /* Builder.swift in Sources */,
 				C68197BE2BD6F760002E484B /* MVXProtocole.swift in Sources */,
