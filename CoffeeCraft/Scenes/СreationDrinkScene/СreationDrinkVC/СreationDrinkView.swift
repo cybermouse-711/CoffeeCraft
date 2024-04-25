@@ -66,12 +66,7 @@ private extension СreationDrinkView {
     }
     
     func setupCreateButton() {
-        createButton.setTitle(Titles.createButton, for: .normal)
-        createButton.setTitleColor(.black, for: .normal)
-        createButton.layer.cornerRadius = 30
-        createButton.backgroundColor = UIColor(named: ColorSet.brown)
-        createButton.setTitleColor(UIColor(named: ColorSet.black), for: .normal)
-        createButton.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+        createButton.configure(button: createButton, title: Titles.createButton)
         
         createButton.addTarget(
             СreationDrinkViewController(),
@@ -93,8 +88,6 @@ private extension СreationDrinkView {
         }
         
         createButton.snp.makeConstraints { make in
-            make.height.equalTo(70)
-            make.width.equalTo(250)
             make.centerX.equalTo(self)
             make.bottom.equalTo(self).offset(-80)
         }

@@ -1,59 +1,59 @@
 //
-//  Extensions + UIButton.swift
+//  Extensions + UIElement.swift
 //  CoffeeCraft
 //
 //  Created by Elizaveta Medvedeva on 16.02.24.
 //
 
 import UIKit
+import SnapKit
 
 // MARK: - Extensions for UIButton
 extension UIButton {
 
     ///Унифицированная кнопка
-    func setupButton(title: String) -> UIButton {
-        let button = UIButton()
+    func configure(button: UIButton, title: String) {
         button.setTitle(title, for: .normal)
         button.setTitleColor(UIColor(named: ColorSet.white), for: .normal)
-        button.layer.cornerRadius = 20
+        button.layer.cornerRadius = 30
         button.backgroundColor = UIColor(named: ColorSet.brown)
-        button.titleLabel?.font = UIFont.systemFont(ofSize: 25, weight: .medium)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
         
-        return button
+        button.snp.makeConstraints { make in
+            make.height.equalTo(70)
+            make.width.equalTo(250)
+        }
     }
 }
 
 // MARK: - Extensions for UILabel
 extension UILabel {
-    //////Унифицированный текст большого размера
-    ///func setupMiddlLabel(title: String) -> UILabel {
-    func setupMiniLabel(title: String) -> UILabel {
-        let label = UILabel()
+    
+    //////Унифицированный текст маленького размера
+    func configureMini(label: UILabel, title: String, textAlignment: NSTextAlignment){
         label.text = title
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.textColor = UIColor(named: ColorSet.black)
-        
-        return label
+        label.textAlignment = textAlignment
+        label.numberOfLines = 0
     }
     
     ///Унифицированный текст среднего размера
-    func setupMiddleLabel(title: String) -> UILabel {
-        let label = UILabel()
+    func configureMiddle(label: UILabel, title: String, textAlignment: NSTextAlignment) {
         label.text = title
         label.font = UIFont.systemFont(ofSize: 20, weight: .regular)
         label.textColor = UIColor(named: ColorSet.black)
-        
-        return label
+        label.textAlignment = textAlignment
+        label.numberOfLines = 0
     }
     
-    ///Унифицированный текст маленького размера
-    func setupMaxiLabel(title: String) -> UILabel {
-        let label = UILabel()
+    ///Унифицированный текст большого размера
+    func configureMaxi(label: UILabel, title: String, textAlignment: NSTextAlignment) {
         label.text = title
         label.font = UIFont.systemFont(ofSize: 25, weight: .regular)
         label.textColor = UIColor(named: ColorSet.black)
-        
-        return label
+        label.textAlignment = textAlignment
+        label.numberOfLines = 0
     }
 }
 

@@ -49,12 +49,7 @@ private extension StartView {
     }
     
     func setupStartButton(){
-        startButton.setTitle(Titles.startButton, for: .normal)
-        startButton.setTitleColor(.black, for: .normal)
-        startButton.layer.cornerRadius = 30
-        startButton.backgroundColor = UIColor(named: ColorSet.brown)
-        startButton.setTitleColor(UIColor(named: ColorSet.white), for: .normal)
-        startButton.titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
+        startButton.configure(button: startButton, title: Titles.startButton)
         
         startButton.addTarget(
             StartViewController(),
@@ -68,8 +63,6 @@ private extension StartView {
 private extension StartView {
     func setupConctraints() {
         startButton.snp.makeConstraints { make in
-            make.height.equalTo(70)
-            make.width.equalTo(250)
             make.centerX.equalTo(self)
             make.centerY.equalTo(self)
         }
