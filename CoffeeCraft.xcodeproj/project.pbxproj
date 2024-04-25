@@ -13,7 +13,7 @@
 		C626E7822BA5DEE00021029B /* dishes.json in Resources */ = {isa = PBXBuildFile; fileRef = C626E7812BA5DEE00021029B /* dishes.json */; };
 		C626E7852BA6E5AD0021029B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C626E7842BA6E5AD0021029B /* StorageManager.swift */; };
 		C62D11222BA9E25000E67CF3 /* .gitignor in Resources */ = {isa = PBXBuildFile; fileRef = C62D11212BA9E25000E67CF3 /* .gitignor */; };
-		C662E01A2B7F8DF700548B44 /* Extensions + UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662E0192B7F8DF700548B44 /* Extensions + UIButton.swift */; };
+		C662E01A2B7F8DF700548B44 /* Extensions + UIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662E0192B7F8DF700548B44 /* Extensions + UIElement.swift */; };
 		C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817B2B6AEA4200B81616 /* AppDelegate.swift */; };
 		C675817E2B6AEA4200B81616 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817D2B6AEA4200B81616 /* SceneDelegate.swift */; };
 		C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817F2B6AEA4200B81616 /* StartViewController.swift */; };
@@ -52,7 +52,7 @@
 		C626E7812BA5DEE00021029B /* dishes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dishes.json; sourceTree = "<group>"; };
 		C626E7842BA6E5AD0021029B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		C62D11212BA9E25000E67CF3 /* .gitignor */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignor; sourceTree = "<group>"; };
-		C662E0192B7F8DF700548B44 /* Extensions + UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIButton.swift"; sourceTree = "<group>"; };
+		C662E0192B7F8DF700548B44 /* Extensions + UIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIElement.swift"; sourceTree = "<group>"; };
 		C67581782B6AEA4200B81616 /* CoffeeCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C675817B2B6AEA4200B81616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C675817D2B6AEA4200B81616 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,7 +141,7 @@
 		C662E01B2B7F8E0100548B44 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C662E0192B7F8DF700548B44 /* Extensions + UIButton.swift */,
+				C662E0192B7F8DF700548B44 /* Extensions + UIElement.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -398,7 +398,7 @@
 				C67581902B6AFA2100B81616 /* Model.swift in Sources */,
 				C68197D12BD84E71002E484B /* RecipeDrinkConfigurator.swift in Sources */,
 				C616035D2B7573A600E1BC9E /* StartView.swift in Sources */,
-				C662E01A2B7F8DF700548B44 /* Extensions + UIButton.swift in Sources */,
+				C662E01A2B7F8DF700548B44 /* Extensions + UIElement.swift in Sources */,
 				C626E7852BA6E5AD0021029B /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
