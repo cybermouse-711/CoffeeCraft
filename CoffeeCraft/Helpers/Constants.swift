@@ -5,6 +5,7 @@
 //  Created by Elizaveta Medvedeva on 24.04.24.
 //
 
+///Словарь с наименованием элементов
 enum Titles {
     
     static let navBar: String = "Сreation Drink"
@@ -12,6 +13,7 @@ enum Titles {
     static let createButton: String = "Create a recipe"
 }
 
+///Словарь с перечислением цветов
 enum ColorSet {
     
     static let white: String = "SceneWhite"
@@ -21,3 +23,11 @@ enum ColorSet {
     static let gray: String = "ButtonGray"
     static let brown: String = "ButtonBrown"
 }
+
+/////Перечисления для роутинга
+//enum Target {
+//    
+//    case start
+//    case creationDrink
+//    case recipeDrink
+//}
