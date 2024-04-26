@@ -34,14 +34,3 @@ extension StorageManager: IStorageManager {
     }
 }
 
-//MARK: - Constants
-private extension StorageManager{
-    enum File {
-        static let dishes: String = "dishes"
-        static let typeCoffee: String = "type_coffee"
-    }
-    
-    enum ExtensionFile {
-        static let json = "json"
-    }
-}

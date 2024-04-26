@@ -24,6 +24,17 @@ enum ColorSet {
     static let brown: String = "ButtonBrown"
 }
 
+///Словарь с наименованиями файлов для парсинга
+enum File {
+    static let dishes: String = "dishes"
+    static let typeCoffee: String = "type_coffee"
+}
+
+///Словарь с расширениями файлов для парсинга
+enum ExtensionFile {
+    static let json = "json"
+}
+
 /////Перечисления для роутинга
 //enum Target {
 //    
