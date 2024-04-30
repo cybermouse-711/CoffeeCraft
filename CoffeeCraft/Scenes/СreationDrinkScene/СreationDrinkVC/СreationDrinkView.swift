@@ -14,8 +14,11 @@ final class СreationDrinkView: UIView {
     //MARK: Private Properties
     private let tableView = UITableView(frame: .zero, style: .grouped)
     private let createButton = UIButton()
-  
-   private let titles: [String] = ["dishes", "milk", "type", "grinding", "variety", "roasting"]
+    
+    //Фейковые значения, подлежат удалению после парсинга джейсона
+    private let titles: [String] = ["dishes", "milk", "type",]
+    private let titles2: [String] = ["grinding", "variety", "roasting"]
+    private let arrays: [[String]] = [["dishes", "dishes", "dishes"], ["type", "type", "type"], ["type", "type", "type"]]
     
     //MARK: Init
     override init(frame: CGRect) {
@@ -84,7 +87,7 @@ private extension СreationDrinkView {
             make.top.equalTo(safeAreaLayoutGuide)
             make.trailing.equalTo(safeAreaLayoutGuide)
             make.leading.equalTo(safeAreaLayoutGuide)
-            make.bottom.equalTo(createButton).offset(-350)
+            make.bottom.equalTo(createButton).offset(-150)
         }
         
         createButton.snp.makeConstraints { make in
@@ -98,30 +101,33 @@ private extension СreationDrinkView {
 extension СreationDrinkView: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        1
+        2
        }
     
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        section == 0 ? TitlesofSection.titleforHeader0 : TitlesofSection.titleforHeader1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        titles.count
+        section == 0 ? titles.count : titles2.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         guard let customCell = cell as? TableViewCell else { return UITableViewCell() }
-        let text = titles[indexPath.row]
-        customCell.configure(text, false)
+        
+        switch indexPath.section {
+        case 0:
+            let text = titles[indexPath.row]
+            customCell.configure(text, false)
+        default:
+            let text = titles2[indexPath.row]
+            customCell.configure(text, false)
+        }
         
         return customCell
     }
-    
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        guard let cell = cell as? TableViewCell else { return UITableViewCell() }
-//        let list = titles[indexPath.row]
-//        cell.configure(list, true)
-//        return cell
-//    }
 }
 
 //MARK: - UITableViewDelegate
