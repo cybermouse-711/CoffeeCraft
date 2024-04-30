@@ -25,6 +25,13 @@ enum ColorSet {
     static let brown: String = "ButtonBrown"
 }
 
+///Словарь для Табличного представления
+enum TitlesofSection {
+    
+    static let titleforHeader0: String = "Customize your drink"
+    static let titleforHeader1: String = "Add ingredients"
+}
+
 ///Словарь с наименованиями файлов для парсинга
 enum File {
     static let dishes: String = "dishes"
