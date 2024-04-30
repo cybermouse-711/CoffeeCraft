@@ -11,6 +11,7 @@ enum Titles {
     static let navBar: String = "Сreation Drink"
     static let startButton: String = "Create a drink"
     static let createButton: String = "Create a recipe"
+    static let recipeDrinkLabel: String = "Recipe created"
 }
 
 ///Словарь с перечислением цветов
