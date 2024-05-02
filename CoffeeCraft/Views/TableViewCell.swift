@@ -6,15 +6,25 @@
 //
 
 import UIKit
+import SnapKit
 
 //MARK: - TableViewCell
 final class TableViewCell: UITableViewCell {
     
-    //MARK: - Private Properties
+    //MARK: Private Properties
     private let titleIngredient = UILabel()
+    
     private let switchIngredient = UISwitch()
     
-    //MARK: - Init
+    private let buttonIngredient = UIButton(primaryAction: nil)
+    private var menuIngredient = [UIMenuElement]()
+    private let actionClosure = { (action: UIAction) in
+        print(action.title)
+    }
+    //deleted
+    private let array = ["a", "b"]
+    
+    //MARK: Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setupUI()
@@ -25,10 +35,19 @@ final class TableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //MARK: - Metods
-    func configure(_ text: String, _ isOn: Bool ) {
+    //MARK: Metods
+    ///Метод для настройки ячейки с возможность логического выбора
+    func configureForSwitch(text: String, isOn: Bool ) {
         titleIngredient.text = text
         switchIngredient.isOn = isOn
+        buttonIngredient.removeFromSuperview()
+    }
+    
+    ///Метод для настройки ячейки с выпадающим списком
+    func configureForMenu(text: String, array: [String] ) {
+        titleIngredient.text = text
+        buttonIngredient.setupMenu(button: buttonIngredient, array: array, handler: actionClosure)
+        switchIngredient.removeFromSuperview()
     }
 }
 
@@ -42,6 +61,7 @@ private extension TableViewCell {
         setupCell()
         setupLabel()
         setupSwitch()
+        setupButton()
     }
 }
 
@@ -49,7 +69,7 @@ private extension TableViewCell {
 private extension TableViewCell {
     
     func addSubview() {
-        [titleIngredient, switchIngredient].forEach {
+        [titleIngredient, switchIngredient, buttonIngredient].forEach {
             addSubview($0)
         }
     }
@@ -60,7 +80,7 @@ private extension TableViewCell {
     
     func setupLabel() {
         titleIngredient.textColor = UIColor(named: ColorSet.black)
-        titleIngredient.font = UIFont.systemFont(ofSize: 25)
+        titleIngredient.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         titleIngredient.textAlignment = .left
         titleIngredient.numberOfLines = 1
     }
@@ -69,13 +89,43 @@ private extension TableViewCell {
         switchIngredient.onTintColor = UIColor(named: ColorSet.brown)
         switchIngredient.thumbTintColor = UIColor(named: ColorSet.brown)
     }
+    
+//    func setupMenu(button: UIButton, array: [String]) {
+//        for element in array {
+//            menuIngredient.append(UIAction(title: element, handler: actionClosure))
+//        }
+//    }
+    
+    func setupButton() {
+        buttonIngredient.menu = UIMenu(options: .displayInline, children: menuIngredient)
+        buttonIngredient.showsMenuAsPrimaryAction = true
+        buttonIngredient.changesSelectionAsPrimaryAction = true
+        
+        buttonIngredient.tintColor = UIColor(named: ColorSet.brown)
+        buttonIngredient.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+    }
 }
 
 //MARK: - Constraints
 private extension TableViewCell {
     func setupConctraints() {
         
-        [titleIngredient, switchIngredient].forEach {
+//        titleIngredient.snp.makeConstraints { make in
+//            make.centerY.equalTo(self)
+//            make.leading.equalTo(self).offset(30)
+//        }
+//        
+//        switchIngredient.snp.makeConstraints { make in
+//            make.centerY.equalTo(self)
+//            make.trailing.equalTo(self).offset(-30)
+//        }
+//        
+//        buttonIngredient.snp.makeConstraints { make in
+//            make.centerY.equalTo(self)
+//            make.trailing.equalTo(self).offset(-30)
+//        }
+        
+        [titleIngredient, switchIngredient, buttonIngredient].forEach {
             $0.translatesAutoresizingMaskIntoConstraints = false
         }
         
@@ -84,8 +134,11 @@ private extension TableViewCell {
             titleIngredient.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             
             switchIngredient.centerYAnchor.constraint(equalTo: centerYAnchor),
-            switchIngredient.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)
-
+            switchIngredient.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
+            
+            buttonIngredient.centerYAnchor.constraint(equalTo: centerYAnchor),
+            buttonIngredient.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)
+      
         ])
     }
 }

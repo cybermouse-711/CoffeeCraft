@@ -120,10 +120,11 @@ extension СreationDrinkView: UITableViewDataSource {
         switch indexPath.section {
         case 0:
             let text = titles[indexPath.row]
-            customCell.configure(text, false)
+            customCell.configureForSwitch(text, false)
         default:
             let text = titles2[indexPath.row]
-            customCell.configure(text, false)
+            let array = arrays[indexPath.row]
+            customCell.configureForMenu(text, array)
         }
         
         return customCell
