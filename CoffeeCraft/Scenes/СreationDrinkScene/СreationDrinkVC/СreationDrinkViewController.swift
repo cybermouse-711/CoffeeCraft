@@ -37,10 +37,14 @@ final class СreationDrinkViewController: UIViewController {
         let request = СreationDrinkRequest()
         interactor?.showСreationDrink(request: request)
     }
+    
+    private func dismissViewControllers() {
+        dismiss(animated: true)
+    }
 }
 
 //MARK: - Setup UI
-extension СreationDrinkViewController {
+private extension СreationDrinkViewController {
     func setupNavController() {
         title = Titles.navBar
         
@@ -52,7 +56,14 @@ extension СreationDrinkViewController {
         
         navigationController?.navigationBar.standardAppearance = navBarAppearance
         navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-       
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            systemItem: .cancel,
+            primaryAction: UIAction { [unowned self] _ in
+                dismissViewControllers()
+            }
+        )
+        
         navigationController?.navigationBar.tintColor = UIColor(named: ColorSet.white)
     }
 }
