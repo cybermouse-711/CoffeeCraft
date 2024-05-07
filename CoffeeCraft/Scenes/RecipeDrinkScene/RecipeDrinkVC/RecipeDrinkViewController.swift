@@ -21,6 +21,7 @@ final class RecipeDrinkViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view = RecipeDrinkView(frame: UIScreen.main.bounds)
+        setupNavController()
         setup()
     }
     
@@ -28,8 +29,28 @@ final class RecipeDrinkViewController: UIViewController {
         let request = RecipeDrinkRequest()
         interactor?.showRecipeDrink(request: request)
     }
+    
+    private func dismissViewControllers() {
+        dismiss(animated: true)
+    }
 }
 
+//MARK: - Setup UI
+private extension RecipeDrinkViewController {
+    func setupNavController() {
+        title = Titles.navBar
+        
+        let navBarAppearance = UINavigationBarAppearance()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            systemItem: .cancel,
+            primaryAction: UIAction { [unowned self] _ in
+                dismissViewControllers()
+            }
+        )
+    }
+}
+    
 //MARK: - Extension for protocols
 extension RecipeDrinkViewController: RecipeDrinkViewControllerLogic {
     func displayRecipeDrink(viewModel: RecipeDrinkViewModel) {
