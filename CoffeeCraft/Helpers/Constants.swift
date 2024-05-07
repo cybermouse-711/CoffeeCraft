@@ -7,7 +7,6 @@
 
 ///Словарь с наименованием элементов
 enum Titles {
-    
     static let navBar: String = "Сreation Drink"
     static let startButton: String = "Create a drink"
     static let createButton: String = "Create a recipe"
@@ -16,7 +15,6 @@ enum Titles {
 
 ///Словарь с перечислением цветов
 enum ColorSet {
-    
     static let white: String = "SceneWhite"
     static let lightGray: String = "SceneLightGray"
     static let darkGray: String = "SceneDarkGray"
@@ -25,9 +23,17 @@ enum ColorSet {
     static let brown: String = "ButtonBrown"
 }
 
+///Cловарь с иконками
+enum IconsSet {
+    static let cezve: String = "cezve.png"
+    static let mokaPot: String = "mokaPot.png"
+    static let espressoMachine: String = "espressoMachine.png"
+    static let frenchPress: String = "frenchPress.png"
+    static let filter: String = "filter.png"
+}
+
 ///Словарь для Табличного представления
 enum TitlesofSection {
-    
     static let titleforHeader0: String = "Customize your drink"
     static let titleforHeader1: String = "Add ingredients"
 }
