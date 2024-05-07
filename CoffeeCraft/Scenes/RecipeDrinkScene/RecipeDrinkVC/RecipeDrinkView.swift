@@ -11,6 +11,7 @@ import UIKit
 final class RecipeDrinkView: UIView {
     
     //MARK: Private Properties
+    private let recipeDrinkImage = UIImageView()
     private let recipeDrinkLabel = UILabel()
     
     //MARK: Init
@@ -33,7 +34,8 @@ private extension RecipeDrinkView {
         setupConctraints()
         
         setupSelfView()
-        setupStartButton()
+        setupRecipeDrinkImage()
+        setupRecipeDrinkLabel()
     }
 }
 
@@ -44,10 +46,18 @@ private extension RecipeDrinkView {
     }
     
     func addSubViews() {
-        addSubview(recipeDrinkLabel)
+        [recipeDrinkImage, recipeDrinkLabel].forEach {
+            addSubview($0)
+        }
     }
     
-    func setupStartButton(){
+    func setupRecipeDrinkImage(){
+        recipeDrinkImage.image = UIImage(named: IconsSet.mokaPot)
+        recipeDrinkImage.layer.backgroundColor = .none
+        recipeDrinkImage.tintColor = UIColor(named: ColorSet.brown)
+    }
+    
+    func setupRecipeDrinkLabel(){
         recipeDrinkLabel.configureMiddle(label: recipeDrinkLabel, title: Titles.recipeDrinkLabel , textAlignment: .center)
     }
 }
@@ -55,9 +65,16 @@ private extension RecipeDrinkView {
 //MARK: - Constraints
 private extension RecipeDrinkView {
     func setupConctraints() {
+        recipeDrinkImage.snp.makeConstraints { make in
+            make.width.equalTo(100)
+            make.height.equalTo(100)
+            make.centerX.equalTo(self)
+            make.top.equalTo(self).offset(150)
+        }
+        
         recipeDrinkLabel.snp.makeConstraints { make in
             make.centerX.equalTo(self)
-            make.centerY.equalTo(self)
+            make.top.equalTo(recipeDrinkImage.snp.bottom).offset(30)
         }
     }
 }
