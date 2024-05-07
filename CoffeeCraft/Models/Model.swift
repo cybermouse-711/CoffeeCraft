@@ -57,7 +57,7 @@ struct Drink {
 }
 
 //MARK: Coffee grains
-enum Grains: String {
+enum Grains: String, CaseIterable {
     case arabica = "Arabica"
     case robusta = "Robusta"
     case liberica = "Liberica"
@@ -67,7 +67,7 @@ enum Grains: String {
 }
 
 //MARK: Roasting beans
-enum Roasting: String {
+enum Roasting: String, CaseIterable {
     case light = "Light"
     case medium = "Medium"
     case mediumDark = "Medium-Dark"
