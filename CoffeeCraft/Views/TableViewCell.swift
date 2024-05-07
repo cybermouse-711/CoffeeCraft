@@ -17,12 +17,14 @@ final class TableViewCell: UITableViewCell {
     private let switchIngredient = UISwitch()
     
     private let buttonIngredient = UIButton(primaryAction: nil)
-    private var menuIngredient = [UIMenuElement]()
+    private var menuIngredient: UIMenu!
+    private var menuChildren: [UIMenuElement] = []
     private let actionClosure = { (action: UIAction) in
         print(action.title)
     }
-    //deleted
-    private let array = ["a", "b"]
+    
+    ///Массив на случай если в меню не выгрузятся значения
+    private var defaultArray = ["no data"]
     
     //MARK: Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -37,18 +39,34 @@ final class TableViewCell: UITableViewCell {
     
     //MARK: Metods
     ///Метод для настройки ячейки с возможность логического выбора
-    func configureForSwitch(text: String, isOn: Bool ) {
+    func configureForSwitch(_ text: String, _ isOn: Bool) {
         titleIngredient.text = text
         switchIngredient.isOn = isOn
         buttonIngredient.removeFromSuperview()
     }
     
     ///Метод для настройки ячейки с выпадающим списком
-    func configureForMenu(text: String, array: [String] ) {
+    func configureForMenu(_ text: String, _ array: [String]) {
         titleIngredient.text = text
         buttonIngredient.setupMenu(button: buttonIngredient, array: array, handler: actionClosure)
         switchIngredient.removeFromSuperview()
     }
+    
+    ///Метод для отработки нажатия на ячейку со свитчом
+    func tapOnSwitch() {
+        switchIngredient.isOn.toggle()
+    }
+    
+    ///Метод для отработки нажатия на ячейку с выпадающим списком
+    func tapOnMenu(_ text: String) {
+        menuChildren.append(UIAction(title: text, state: .on, handler: actionClosure))
+    }
+    
+    //    func tapOnMenu(_ array: [String]) {
+    //        for element in array {
+    //            menuIngredient.append(UIAction(title: element, state: .on, handler: actionClosure))
+    //        }
+    //    }
 }
 
 //MARK: - Configure UI
@@ -62,6 +80,7 @@ private extension TableViewCell {
         setupLabel()
         setupSwitch()
         setupButton()
+     //   setupMenu()
     }
 }
 
@@ -79,6 +98,7 @@ private extension TableViewCell {
     }
     
     func setupLabel() {
+        titleIngredient.text = "Test"
         titleIngredient.textColor = UIColor(named: ColorSet.black)
         titleIngredient.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         titleIngredient.textAlignment = .left
@@ -90,19 +110,28 @@ private extension TableViewCell {
         switchIngredient.thumbTintColor = UIColor(named: ColorSet.brown)
     }
     
-//    func setupMenu(button: UIButton, array: [String]) {
-//        for element in array {
-//            menuIngredient.append(UIAction(title: element, handler: actionClosure))
-//        }
-//    }
-    
     func setupButton() {
-        buttonIngredient.menu = UIMenu(options: .displayInline, children: menuIngredient)
+        for element in defaultArray {
+            menuChildren.append(UIAction(title: element, handler: actionClosure))
+        }
+        
+   //     buttonIngredient.menu = menuIngredient
+        
+       buttonIngredient.menu = UIMenu(options: .displayInline, children: menuChildren)
         buttonIngredient.showsMenuAsPrimaryAction = true
         buttonIngredient.changesSelectionAsPrimaryAction = true
         
         buttonIngredient.tintColor = UIColor(named: ColorSet.brown)
         buttonIngredient.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+    }
+    
+    func setupMenu() {
+        
+        menuIngredient = UIMenu(title: "Test", options: .displayInline, children: menuChildren)
+        
+        for element in defaultArray {
+            menuChildren.append(UIAction(title: element, handler: actionClosure))
+        }
     }
 }
 
@@ -110,35 +139,19 @@ private extension TableViewCell {
 private extension TableViewCell {
     func setupConctraints() {
         
-//        titleIngredient.snp.makeConstraints { make in
-//            make.centerY.equalTo(self)
-//            make.leading.equalTo(self).offset(30)
-//        }
-//        
-//        switchIngredient.snp.makeConstraints { make in
-//            make.centerY.equalTo(self)
-//            make.trailing.equalTo(self).offset(-30)
-//        }
-//        
-//        buttonIngredient.snp.makeConstraints { make in
-//            make.centerY.equalTo(self)
-//            make.trailing.equalTo(self).offset(-30)
-//        }
-        
-        [titleIngredient, switchIngredient, buttonIngredient].forEach {
-            $0.translatesAutoresizingMaskIntoConstraints = false
+        titleIngredient.snp.makeConstraints { make in
+            make.centerY.equalTo(self)
+            make.leading.equalTo(self).offset(30)
         }
         
-        NSLayoutConstraint.activate([ 
-            titleIngredient.centerYAnchor.constraint(equalTo: centerYAnchor),
-            titleIngredient.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
-            
-            switchIngredient.centerYAnchor.constraint(equalTo: centerYAnchor),
-            switchIngredient.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
-            
-            buttonIngredient.centerYAnchor.constraint(equalTo: centerYAnchor),
-            buttonIngredient.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)
-      
-        ])
+        switchIngredient.snp.makeConstraints { make in
+            make.centerY.equalTo(self)
+            make.trailing.equalTo(self).offset(-30)
+        }
+        
+        buttonIngredient.snp.makeConstraints { make in
+            make.centerY.equalTo(self)
+            make.trailing.equalTo(self).offset(-30)
+        }
     }
 }
