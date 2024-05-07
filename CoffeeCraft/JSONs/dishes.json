@@ -7,21 +7,21 @@
         "recipe": "Pour the water into the cezve. Add the 2 tablespoons coffee and sugar, if using. Mix well to dissolve the coffee and sugar. Do not stir after this point. Place the cezve on the stovetop over medium heat. After a few minutes, the coffee will rise and foam up. Just before it begins to boil, remove the cezve from the heat. Skim off the foam, adding a little to each serving cup. Return the cezve to the heat and let it slowly foam up again. Pour the coffee very slowly into the serving cups so the foam rises to the top. Let the coffee settle for a few minutes."
     },
     {
-        "id": "moka_pot",
+        "id": "mokaPot",
         "dishes": "Moka Pot",
         "grinding": ["Fine", "Medium", "Default"],
         "shots": 2,
         "recipe": "Set your kettle to boil, or, if you’re using a temperature controlled kettle. Add your heated water to the bottom of the Moka pot, filling to the line inside the carafe. Put the metal filter basket into the brewer and place it on the scale. Tare your scale and add 3 tablespoons of freshly ground coffee into the filter. Use your finger to level out the grounds, or, using a heat-resistant towel, give it a gentle shake to level out the grounds. Remove the brewer from the scale. Screw the top and bottom together using a heat-resistant towel. Turn on your heat source to medium-low and put the Moka pot on top. Leave the top lid open. The coffee will begin to come out of the spout. Close the lid. When you hear a hissing sound, remove the Moka pot from the heat source and allow the coffee to finish brewing."
     },
     {
-        "id": "espresso_machine",
+        "id": "espressoMachine",
         "dishes": "Espresso Machine",
         "grinding": ["Fine", "Default"],
         "shots": 1,
         "recipe": "Measure 1 tablespoon or 9g of beans for a single shot. Tamp horizontally and straight and place the watercup onto the (naked)portafilter. Fill 30 ml boiled water till first marker line (the ideal temperature for espresso is 95° C). Slide the combination into the Superkop. Pull the lever 6 times in 25-30 seconds…don’t go too fast. Pour the shot into a preheated cup."
     },
     {
-        "id": "french_press",
+        "id": "frenchPress",
         "dishes": "French Press",
         "grinding": ["Medium", "Coarse", "Default"],
         "shots": 1,
