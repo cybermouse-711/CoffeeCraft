@@ -25,13 +25,19 @@ extension UIButton {
         }
     }
     
+    ///Настройка меню
     func setupMenu(button: UIButton, array: [String], handler: @escaping UIActionHandler) {
         var menu: [UIMenuElement] = []
-        
-        for element in array {
-            menu.append(UIAction(title: element, handler: handler))
-        }
-    }
+   
+           for element in array {
+               menu.append(UIAction(title: element, handler: handler))
+           }
+       }
+}
+
+// MARK: - Extensions for UIMenuElement
+extension UIMenuElement {
+    
 }
 
 // MARK: - Extensions for UILabel
