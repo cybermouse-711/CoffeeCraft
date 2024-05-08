@@ -8,7 +8,7 @@
      "fact": "The espresso, also known as a short black, is approximately 1 oz. of highly concentrated coffee. Although simple in appearance, it can be difficult to master."
     },
     {
-     "id": "double_espresso",
+     "id": "doubleEspresso",
      "milk": false,
      "type": "Double Espresso",
      "shots": 2,
@@ -16,7 +16,7 @@
      "fact": "A double espresso may also be listed as doppio, which is the Italian word for double. This drink is highly concentrated and strong."
     },
     {
-     "id": "red_eye",
+     "id": "redEye",
      "milk": false,
      "type": "Red Eye",
      "shots": 1,
@@ -24,7 +24,7 @@
      "fact": "+ 6 oz. of drip-brewed coffee. The red eye's purpose is to add a boost of caffeine to your standard cup of coffee."
     },
     {
-     "id": "black_eye",
+     "id": "blackEye",
      "milk": false,
      "type": "Black Eye",
      "shots": 2,
@@ -40,7 +40,7 @@
      "fact": "Americanos are popular breakfast drinks and thought to have originated during World War II. Soldiers would add water to their coffee to extend their rations farther. The water dilutes the espresso while still maintaining a high level of caffeine."
     },
     {
-     "id": "long_black",
+     "id": "longBlack",
      "milk": false,
      "type": "Long Black",
      "shots": 2,
@@ -56,7 +56,7 @@
      "fact": "The word macchiato means mark or stain. This is in reference to the mark that steamed milk leaves on the surface of the espresso as it is dashed into the drink. Flavoring syrups are often added to the drink according to customer preference."
     },
     {
-     "id": "long_macchiato",
+     "id": "longMacchiato",
      "milk": true,
      "type": "Long Macchiato",
      "shots": 2,
@@ -88,7 +88,7 @@
      "fact": "This creamy coffee drink is usually consumed at breakfast time in Italy and is loved in the United States as well. It is usually associated with indulgence and comfort because of its thick foam layer and additional flavorings that can be added to it."
     },
     {
-     "id": "flat_white",
+     "id": "flatWhite",
      "milk": true,
      "type": "Flat White",
      "shots": 1,
@@ -96,7 +96,7 @@
      "fact": "A flat white also originates from New Zealand and Australia and is very similar to a cappuccino but lacks the foam layer and chocolate powder. To keep the drink creamy rather than frothy, steamed milk from the bottom of the jug is used instead of from the top."
     },
     {
-     "id": "cafe_latte",
+     "id": "cafeLatte",
      "milk": true,
      "type": "Cafe Latte",
      "shots": 1,

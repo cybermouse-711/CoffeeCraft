@@ -41,7 +41,7 @@ enum TitlesofSection {
 ///Словарь с наименованиями файлов для парсинга
 enum File {
     static let dishes: String = "dishes"
-    static let typeCoffee: String = "type_coffee"
+    static let typeCoffee: String = "typeCoffee"
 }
 
 ///Словарь с расширениями файлов для парсинга

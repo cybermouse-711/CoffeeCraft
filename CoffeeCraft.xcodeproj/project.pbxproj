@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		C616035D2B7573A600E1BC9E /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616035C2B7573A600E1BC9E /* StartView.swift */; };
 		C61603602B75762C00E1BC9E /* СreationDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616035F2B75762C00E1BC9E /* СreationDrinkView.swift */; };
-		C626E7802BA5D6FE0021029B /* type_coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = C626E77F2BA5D6FE0021029B /* type_coffee.json */; };
+		C626E7802BA5D6FE0021029B /* typeCoffee.json in Resources */ = {isa = PBXBuildFile; fileRef = C626E77F2BA5D6FE0021029B /* typeCoffee.json */; };
 		C626E7822BA5DEE00021029B /* dishes.json in Resources */ = {isa = PBXBuildFile; fileRef = C626E7812BA5DEE00021029B /* dishes.json */; };
 		C626E7852BA6E5AD0021029B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C626E7842BA6E5AD0021029B /* NetworkManager.swift */; };
 		C62D11222BA9E25000E67CF3 /* .gitignor in Resources */ = {isa = PBXBuildFile; fileRef = C62D11212BA9E25000E67CF3 /* .gitignor */; };
@@ -49,7 +49,7 @@
 /* Begin PBXFileReference section */
 		C616035C2B7573A600E1BC9E /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		C616035F2B75762C00E1BC9E /* СreationDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СreationDrinkView.swift"; sourceTree = "<group>"; };
-		C626E77F2BA5D6FE0021029B /* type_coffee.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = type_coffee.json; sourceTree = "<group>"; };
+		C626E77F2BA5D6FE0021029B /* typeCoffee.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = typeCoffee.json; sourceTree = "<group>"; };
 		C626E7812BA5DEE00021029B /* dishes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dishes.json; sourceTree = "<group>"; };
 		C626E7842BA6E5AD0021029B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C62D11212BA9E25000E67CF3 /* .gitignor */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignor; sourceTree = "<group>"; };
@@ -127,7 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				C626E7812BA5DEE00021029B /* dishes.json */,
-				C626E77F2BA5D6FE0021029B /* type_coffee.json */,
+				C626E77F2BA5D6FE0021029B /* typeCoffee.json */,
 			);
 			path = JSONs;
 			sourceTree = "<group>";
@@ -360,7 +360,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C67581882B6AEA4300B81616 /* LaunchScreen.storyboard in Resources */,
-				C626E7802BA5D6FE0021029B /* type_coffee.json in Resources */,
+				C626E7802BA5D6FE0021029B /* typeCoffee.json in Resources */,
 				C62D11222BA9E25000E67CF3 /* .gitignor in Resources */,
 				C67581852B6AEA4300B81616 /* Assets.xcassets in Resources */,
 				C626E7822BA5DEE00021029B /* dishes.json in Resources */,
