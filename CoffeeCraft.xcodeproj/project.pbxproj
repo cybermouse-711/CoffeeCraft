@@ -11,7 +11,7 @@
 		C61603602B75762C00E1BC9E /* СreationDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C616035F2B75762C00E1BC9E /* СreationDrinkView.swift */; };
 		C626E7802BA5D6FE0021029B /* type_coffee.json in Resources */ = {isa = PBXBuildFile; fileRef = C626E77F2BA5D6FE0021029B /* type_coffee.json */; };
 		C626E7822BA5DEE00021029B /* dishes.json in Resources */ = {isa = PBXBuildFile; fileRef = C626E7812BA5DEE00021029B /* dishes.json */; };
-		C626E7852BA6E5AD0021029B /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C626E7842BA6E5AD0021029B /* StorageManager.swift */; };
+		C626E7852BA6E5AD0021029B /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C626E7842BA6E5AD0021029B /* NetworkManager.swift */; };
 		C62D11222BA9E25000E67CF3 /* .gitignor in Resources */ = {isa = PBXBuildFile; fileRef = C62D11212BA9E25000E67CF3 /* .gitignor */; };
 		C662E01A2B7F8DF700548B44 /* Extensions + UIElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = C662E0192B7F8DF700548B44 /* Extensions + UIElement.swift */; };
 		C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675817B2B6AEA4200B81616 /* AppDelegate.swift */; };
@@ -51,7 +51,7 @@
 		C616035F2B75762C00E1BC9E /* СreationDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СreationDrinkView.swift"; sourceTree = "<group>"; };
 		C626E77F2BA5D6FE0021029B /* type_coffee.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = type_coffee.json; sourceTree = "<group>"; };
 		C626E7812BA5DEE00021029B /* dishes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = dishes.json; sourceTree = "<group>"; };
-		C626E7842BA6E5AD0021029B /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		C626E7842BA6E5AD0021029B /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		C62D11212BA9E25000E67CF3 /* .gitignor */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignor; sourceTree = "<group>"; };
 		C662E0192B7F8DF700548B44 /* Extensions + UIElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions + UIElement.swift"; sourceTree = "<group>"; };
 		C67581782B6AEA4200B81616 /* CoffeeCraft.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeCraft.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,7 +135,7 @@
 		C626E7862BA6E5B20021029B /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				C626E7842BA6E5AD0021029B /* StorageManager.swift */,
+				C626E7842BA6E5AD0021029B /* NetworkManager.swift */,
 				C6AA06532BEAA1C0009BB92E /* DataManager.swift */,
 			);
 			path = Services;
@@ -403,7 +403,7 @@
 				C68197D12BD84E71002E484B /* RecipeDrinkConfigurator.swift in Sources */,
 				C616035D2B7573A600E1BC9E /* StartView.swift in Sources */,
 				C662E01A2B7F8DF700548B44 /* Extensions + UIElement.swift in Sources */,
-				C626E7852BA6E5AD0021029B /* StorageManager.swift in Sources */,
+				C626E7852BA6E5AD0021029B /* NetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
