@@ -41,7 +41,6 @@
 		C68197DA2BD96655002E484B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197D92BD96655002E484B /* Constants.swift */; };
 		C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */; };
 		C6A3AC952B7C0A9A00853011 /* RecipeDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */; };
-		C6A3AC992B7C121B00853011 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC982B7C121B00853011 /* Builder.swift */; };
 		C6AA06542BEAA1C0009BB92E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06532BEAA1C0009BB92E /* DataManager.swift */; };
 		C6AD9C2F2B91295E0074ABAD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD9C2E2B91295E0074ABAD /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
@@ -81,7 +80,6 @@
 		C68197D92BD96655002E484B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkView.swift; sourceTree = "<group>"; };
 		C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkViewController.swift; sourceTree = "<group>"; };
-		C6A3AC982B7C121B00853011 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		C6AA06532BEAA1C0009BB92E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C6AD9C2E2B91295E0074ABAD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,7 +180,6 @@
 				C68197DB2BD96A28002E484B /* Helpers */,
 				C662E01B2B7F8E0100548B44 /* Extensions */,
 				C6C527042B87F9CD00385A08 /* Views */,
-				C6A3AC9A2B7C121F00853011 /* Builders */,
 				C675819A2B6E9D6A00B81616 /* Models */,
 				C626E7862BA6E5B20021029B /* Services */,
 				C626E7832BA5EC4F0021029B /* JSONs */,
@@ -276,14 +273,6 @@
 				C68197CB2BD84DE1002E484B /* RecipeDrinkVC */,
 			);
 			path = RecipeDrinkScene;
-			sourceTree = "<group>";
-		};
-		C6A3AC9A2B7C121F00853011 /* Builders */ = {
-			isa = PBXGroup;
-			children = (
-				C6A3AC982B7C121B00853011 /* Builder.swift */,
-			);
-			path = Builders;
 			sourceTree = "<group>";
 		};
 		C6C527042B87F9CD00385A08 /* Views */ = {
@@ -382,7 +371,6 @@
 				C68197CF2BD84E58002E484B /* RecipeDrinkModel.swift in Sources */,
 				C68197DA2BD96655002E484B /* Constants.swift in Sources */,
 				C68197D32BD84E8F002E484B /* RecipeDrinkPresenter.swift in Sources */,
-				C6A3AC992B7C121B00853011 /* Builder.swift in Sources */,
 				C68197BE2BD6F760002E484B /* MVXProtocole.swift in Sources */,
 				C675817C2B6AEA4200B81616 /* AppDelegate.swift in Sources */,
 				C68197C12BD8483D002E484B /* StartRouter.swift in Sources */,
