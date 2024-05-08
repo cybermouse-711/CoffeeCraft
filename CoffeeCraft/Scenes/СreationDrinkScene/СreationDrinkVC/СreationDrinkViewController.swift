@@ -49,22 +49,14 @@ private extension СreationDrinkViewController {
         title = Titles.navBar
         
         let navBarAppearance = UINavigationBarAppearance()
-       
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: ColorSet.white) ?? UIColor.white]
-        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: ColorSet.white) ?? UIColor.white]
-        navBarAppearance.backgroundColor = UIColor(named: ColorSet.darkGray)
-        
-        navigationController?.navigationBar.standardAppearance = navBarAppearance
-        navigationController?.navigationBar.scrollEdgeAppearance = navBarAppearance
-        
+        navBarAppearance.setupNavBarAppearance(navigationController, navBarAppearance)
+      
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             systemItem: .cancel,
             primaryAction: UIAction { [unowned self] _ in
                 dismissViewControllers()
             }
         )
-        
-        navigationController?.navigationBar.tintColor = UIColor(named: ColorSet.white)
     }
 }
 

@@ -71,3 +71,21 @@ extension UILabel {
     }
 }
 
+// MARK: - Extensions for NavigationBarAppearance
+extension UINavigationBarAppearance {
+    
+    ///Унифицированный NavigationController
+    func setupNavBarAppearance(_ navigationController: UINavigationController?, _ navBarAppearance: UINavigationBarAppearance) {
+        let navigationController = navigationController ?? UINavigationController()
+        let navBarAppearance = navBarAppearance
+        
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: ColorSet.white) ?? UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: ColorSet.white) ?? UIColor.white]
+        navBarAppearance.backgroundColor = UIColor(named: ColorSet.darkGray)
+        
+        navigationController.navigationBar.standardAppearance = navBarAppearance
+        navigationController.navigationBar.scrollEdgeAppearance = navBarAppearance
+        
+        navigationController.navigationBar.tintColor = UIColor(named: ColorSet.white)
+    }
+}

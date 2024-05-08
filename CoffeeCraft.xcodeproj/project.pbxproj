@@ -261,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				C68197D92BD96655002E484B /* Constants.swift */,
+				C68197BD2BD6F760002E484B /* MVXProtocole.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -281,7 +282,6 @@
 			isa = PBXGroup;
 			children = (
 				C6A3AC982B7C121B00853011 /* Builder.swift */,
-				C68197BD2BD6F760002E484B /* MVXProtocole.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
