@@ -18,9 +18,12 @@ final class СreationDrinkViewController: UIViewController {
     var interactor: СreationDrinkInteractorBusinessLogic?
     
     //MARK: Override Methods
+    override func loadView() {
+        view = СreationDrinkView(frame: UIScreen.main.bounds)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = СreationDrinkView(frame: UIScreen.main.bounds)
         setupNavController()
         setup()
     }

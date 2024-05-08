@@ -18,9 +18,12 @@ final class StartViewController: UIViewController {
     var interactor: StartInteractorBusinessLogic?
     
     //MARK: Override Methods
+    override func loadView() {
+        view = StartView(frame: UIScreen.main.bounds)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = StartView(frame: UIScreen.main.bounds)
         setup()
     }
     

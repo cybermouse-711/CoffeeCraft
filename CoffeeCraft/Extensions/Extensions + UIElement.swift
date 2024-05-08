@@ -11,7 +11,7 @@ import SnapKit
 // MARK: - Extensions for UIButton
 extension UIButton {
 
-    ///Унифицированная кнопка
+    ///Унифицированная кнопка среднего размера для текста
     func configure(button: UIButton, title: String) {
         button.setTitle(title, for: .normal)
         button.setTitleColor(UIColor(named: ColorSet.white), for: .normal)
@@ -24,6 +24,8 @@ extension UIButton {
             make.width.equalTo(250)
         }
     }
+    
+    ///Унифицированная кнопка маленького размера для символа
     
     ///Настройка меню
     func setupMenu(button: UIButton, array: [String], handler: @escaping UIActionHandler) {

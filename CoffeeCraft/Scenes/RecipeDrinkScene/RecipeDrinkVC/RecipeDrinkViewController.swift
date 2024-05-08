@@ -18,9 +18,12 @@ final class RecipeDrinkViewController: UIViewController {
     var interactor: RecipeDrinkInteractorBusinessLogic?
     
     //MARK: Override Methods
+    override func loadView() {
+        view = RecipeDrinkView(frame: UIScreen.main.bounds)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view = RecipeDrinkView(frame: UIScreen.main.bounds)
         setupNavController()
         setup()
     }
