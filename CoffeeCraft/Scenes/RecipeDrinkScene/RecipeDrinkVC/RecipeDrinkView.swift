@@ -12,7 +12,7 @@ final class RecipeDrinkView: UIView {
     
     //MARK: Private Properties
     private let recipeDrinkImage = UIImageView()
-    private let recipeDrinkLabel = UILabel()
+    private let recipeDrinkLabel = CustomLabel(Titles.recipeDrinkLabel, .middle)
     
     //MARK: Init
     override init(frame: CGRect) {
@@ -58,7 +58,7 @@ private extension RecipeDrinkView {
     }
     
     func setupRecipeDrinkLabel(){
-        recipeDrinkLabel.configureMiddle(label: recipeDrinkLabel, title: Titles.recipeDrinkLabel , textAlignment: .center)
+        recipeDrinkLabel.textAlignment = .center
     }
 }
 

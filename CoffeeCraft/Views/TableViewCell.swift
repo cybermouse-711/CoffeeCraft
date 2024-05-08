@@ -12,7 +12,7 @@ import SnapKit
 final class TableViewCell: UITableViewCell {
     
     //MARK: Private Properties
-    private let titleIngredient = UILabel()
+    private var titleIngredient = CustomLabel("no data", .mini)
     
     private let switchIngredient = UISwitch()
     
@@ -48,7 +48,7 @@ final class TableViewCell: UITableViewCell {
     ///Метод для настройки ячейки с выпадающим списком
     func configureForMenu(_ text: String, _ array: [String]) {
         titleIngredient.text = text
-        buttonIngredient.setupMenu(button: buttonIngredient, array: array, handler: actionClosure)
+        
         switchIngredient.removeFromSuperview()
     }
     
@@ -67,6 +67,15 @@ final class TableViewCell: UITableViewCell {
     //            menuIngredient.append(UIAction(title: element, state: .on, handler: actionClosure))
     //        }
     //    }
+
+    //MARK: Private Metods
+    private func setupMenu(button: UIButton, array: [String], handler: @escaping UIActionHandler) {
+        var menu: [UIMenuElement] = []
+        
+        for element in array {
+            menu.append(UIAction(title: element, handler: handler))
+        }
+    }
 }
 
 //MARK: - Configure UI
@@ -98,9 +107,6 @@ private extension TableViewCell {
     }
     
     func setupLabel() {
-        titleIngredient.text = "Test"
-        titleIngredient.textColor = UIColor(named: ColorSet.black)
-        titleIngredient.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         titleIngredient.textAlignment = .left
         titleIngredient.numberOfLines = 1
     }
@@ -114,9 +120,7 @@ private extension TableViewCell {
         for element in defaultArray {
             menuChildren.append(UIAction(title: element, handler: actionClosure))
         }
-        
-   //     buttonIngredient.menu = menuIngredient
-        
+
        buttonIngredient.menu = UIMenu(options: .displayInline, children: menuChildren)
         buttonIngredient.showsMenuAsPrimaryAction = true
         buttonIngredient.changesSelectionAsPrimaryAction = true

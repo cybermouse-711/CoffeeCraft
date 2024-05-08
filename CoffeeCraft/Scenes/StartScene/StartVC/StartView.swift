@@ -12,7 +12,7 @@ import SnapKit
 final class StartView: UIView {
     
     //MARK: Private Properties
-    private let startButton = UIButton()
+    private let startButton = CustomButton(Titles.startButton, .maxi)
     
     //MARK: Init
     override init(frame: CGRect) {
@@ -49,8 +49,6 @@ private extension StartView {
     }
     
     func setupStartButton(){
-        startButton.configure(button: startButton, title: Titles.startButton)
-        
         startButton.addTarget(
             StartViewController(),
             action: #selector(StartViewController.goCreationDrinkVC),
