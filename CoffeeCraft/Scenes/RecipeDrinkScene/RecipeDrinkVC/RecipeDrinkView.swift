@@ -66,8 +66,7 @@ private extension RecipeDrinkView {
 private extension RecipeDrinkView {
     func setupConctraints() {
         recipeDrinkImage.snp.makeConstraints { make in
-            make.width.equalTo(100)
-            make.height.equalTo(100)
+            make.width.height.equalTo(100)
             make.centerX.equalTo(self)
             make.top.equalTo(self).offset(150)
         }

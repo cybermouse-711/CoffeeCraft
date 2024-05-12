@@ -13,7 +13,7 @@ final class СreationDrinkView: UIView {
     
     //MARK: Private Properties
     private let tableView = UITableView(frame: .zero, style: .grouped)
-    private let createButton = UIButton()
+    private let createButton = CustomButton(Titles.createButton, .maxi)
     
     //Фейковые значения, подлежат удалению после парсинга джейсона
     private let titles: [String] = ["dishes", "milk", "type",]
@@ -55,8 +55,9 @@ private extension СreationDrinkView {
     }
     
     func addSubViews() {
-        addSubview(tableView)
-        addSubview(createButton)
+        [tableView, createButton].forEach {
+            addSubview($0)
+        }
     }
     
     func setupTableView() {
@@ -72,8 +73,7 @@ private extension СreationDrinkView {
     }
     
     func setupCreateButton() {
-        createButton.configure(button: createButton, title: Titles.createButton)
-        
+ 
         createButton.addTarget(
             СreationDrinkViewController(),
             action: #selector(СreationDrinkViewController.goRecipeDrinkVC),
