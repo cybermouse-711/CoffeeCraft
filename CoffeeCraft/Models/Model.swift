@@ -5,8 +5,6 @@
 //  Created by Елизавета Медведева on 01.02.2024.
 //
 
-import Foundation
-
 //MARK: - Dishes for JSON
 ///Модель для парсинга JSON с типом посуды
 struct Dishes: Decodable {
@@ -89,8 +87,8 @@ struct Recipe {
     let shotsCoffee: TypeCoffee
     ///Приготовление напитка на основе кофе
     let drink: String
-//    ///Изображение с посудой для кофе
-//    let image: String
+    ///Изображение с посудой для кофе
+    let image: String
     ///Факт о кофе
     let fact: TypeCoffee
 }
