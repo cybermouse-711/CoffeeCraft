@@ -12,12 +12,17 @@ import UIKit
 final class CustomNavigationBar: UINavigationBar {
     
     //MARK: Private properties
-    private let navigationController = UINavigationController()
+  //  private let navigationController = UINavigationController()
     private let navBarAppearance = UINavigationBarAppearance()
     
     //MARK: Init
-    override init(frame: CGRect) {
+    init(_ title: String, _ navigationController: UINavigationController) {
         super.init(frame: .zero)
+        
+        let navigationController = navigationController 
+
+        navigationController.navigationBar.topItem?.title = title
+        navigationController.navigationBar.tintColor = UIColor(named: ColorSet.white)
         
         navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: ColorSet.white) ?? UIColor.white]
         navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: ColorSet.white) ?? UIColor.white]
@@ -25,8 +30,6 @@ final class CustomNavigationBar: UINavigationBar {
         
         navigationController.navigationBar.standardAppearance = navBarAppearance
         navigationController.navigationBar.scrollEdgeAppearance = navBarAppearance
-        
-        navigationController.navigationBar.tintColor = UIColor(named: ColorSet.white)
     }
     
     @available(*, unavailable)

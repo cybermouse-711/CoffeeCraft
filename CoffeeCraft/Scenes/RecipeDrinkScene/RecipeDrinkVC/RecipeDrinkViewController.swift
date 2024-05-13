@@ -41,10 +41,12 @@ final class RecipeDrinkViewController: UIViewController {
 //MARK: - Setup UI
 private extension RecipeDrinkViewController {
     func setupNavController() {
-        title = Titles.navBar
         
-        let navBarAppearance = UINavigationBarAppearance()
-        navBarAppearance.setupNavBarAppearance(navigationController, navBarAppearance)
+        let navBar = CustomNavigationBar(Titles.navBar, navigationController ?? UINavigationController())
+//        title = Titles.navBar
+//        
+//        let navBarAppearance = UINavigationBarAppearance()
+//        navBarAppearance.setupNavBarAppearance(navigationController, navBarAppearance)
         
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             systemItem: .cancel,
