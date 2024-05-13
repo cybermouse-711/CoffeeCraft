@@ -43,11 +43,7 @@ private extension RecipeDrinkViewController {
     func setupNavController() {
         
         let navBar = CustomNavigationBar(Titles.navBar, navigationController ?? UINavigationController())
-//        title = Titles.navBar
-//        
-//        let navBarAppearance = UINavigationBarAppearance()
-//        navBarAppearance.setupNavBarAppearance(navigationController, navBarAppearance)
-        
+
         navigationItem.rightBarButtonItem = UIBarButtonItem(
             systemItem: .cancel,
             primaryAction: UIAction { [unowned self] _ in
