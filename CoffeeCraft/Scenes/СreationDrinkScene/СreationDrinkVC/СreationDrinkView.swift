@@ -16,10 +16,8 @@ final class СreationDrinkView: UIView {
     private let createButton = CustomButton(Titles.createButton, .maxi)
     
     //Фейковые значения, подлежат удалению после парсинга джейсона
-    private let titles: [String] = ["dishes", "milk", "type",]
-    private let switchs: [Bool] = [false, true, false]
-    private let titles2: [String] = ["grinding", "variety", "roasting"]
-    private let arrays: [[String]] = [["dishes1", "dishes2", "dishes3"], ["type1", "type2", "type3"], ["type4", "type5", "type6"]]
+    private let dict1: [String: Bool] = ["dishes": true, "milk": false, "type": true]
+    private let dict2: [String: [String]] = ["grinding": ["dishes1", "dishes2", "dishes3"], "variety": ["type1", "type2", "type3"], "roasting": ["type4", "type5", "type6"]]
     
     private var newSwitchs: [Bool] = []
     
@@ -112,7 +110,7 @@ extension СreationDrinkView: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        section == 0 ? titles.count : titles2.count
+        section == 0 ? dict2.keys.count : dict1.keys.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -122,17 +120,12 @@ extension СreationDrinkView: UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
-            let text = titles2[indexPath.row]
-            let menu = arrays[indexPath.row]
-            customCell.configureForMenu(text, menu)
+            customCell.configureForMenu(indexPath, dict2)
         case 1:
-            let text = titles[indexPath.row]
-            let isOn = switchs[indexPath.row]
-            customCell.configureForSwitch(text, isOn)
+            customCell.configureForSwitch(indexPath, dict1)
         default:
             break
         }
-        
         return customCell
     }
 }
@@ -149,23 +142,23 @@ extension СreationDrinkView: UITableViewDelegate {
 //        
 //        let cell: TableViewCell?
         
-        guard let cell = tableView.cellForRow(at: indexPath) as? TableViewCell else { return }
-
-        switch indexPath.section {
-        case 0:
-            var menu = arrays[indexPath.row]
-            cell.tapOnMenu("Test")
-        case 1:
-            let text = titles[indexPath.row]
-           var isOn = switchs[indexPath.row]
-            isOn.toggle()
-            newSwitchs.append(isOn)
-            cell.configureForSwitch(text, isOn)
-            
-            tableView.reloadRows(at: [indexPath], with: .automatic)
-        default:
-            break
-        }
+//        guard let cell = tableView.cellForRow(at: indexPath) as? TableViewCell else { return }
+//
+//        switch indexPath.section {
+//        case 0:
+//            var menu = arrays[indexPath.row]
+//            cell.tapOnMenu("Test")
+//        case 1:
+//            let text = titles[indexPath.row]
+//           var isOn = switchs[indexPath.row]
+//            isOn.toggle()
+//            newSwitchs.append(isOn)
+//            cell.configureForSwitch(text, isOn)
+//            
+//            tableView.reloadRows(at: [indexPath], with: .automatic)
+//        default:
+//            break
+//        }
         
 //        if indexPath.section == 1 {
 //            var isOn = switchs[indexPath.row]

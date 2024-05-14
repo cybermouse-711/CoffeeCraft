@@ -17,14 +17,14 @@ final class TableViewCell: UITableViewCell {
     private let switchIngredient = UISwitch()
     
     private let buttonIngredient = UIButton(primaryAction: nil)
-    private var menuIngredient: UIMenu!
-    private var menuChildren: [UIMenuElement] = []
+    private var menuIngredient = UIMenu()
+    private var menuChildren = [UIAction]()
     private let actionClosure = { (action: UIAction) in
         print(action.title)
     }
     
-    ///Массив на случай если в меню не выгрузятся значения
-    private var defaultArray = ["no data"]
+    ///Словарь на случай если в меню не выгрузятся значения
+    private var defaultDict = ["no data": ["nil"]]
     
     //MARK: Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -39,16 +39,29 @@ final class TableViewCell: UITableViewCell {
     
     //MARK: Metods
     ///Метод для настройки ячейки с возможность логического выбора
-    func configureForSwitch(_ text: String, _ isOn: Bool) {
-        titleIngredient.text = text
-        switchIngredient.isOn = isOn
+    func configureForSwitch(_ indexPath: IndexPath, _ dictionary: [String: Bool]) {
+        let keysArray = Array(dictionary.keys)
+        let valuesArray = Array(dictionary.values)
+        
+        let key = keysArray[indexPath.row]
+        let value = valuesArray[indexPath.row]
+        
+        titleIngredient.text = key
+        switchIngredient.isOn = value
         buttonIngredient.removeFromSuperview()
+        
     }
     
     ///Метод для настройки ячейки с выпадающим списком
-    func configureForMenu(_ text: String, _ array: [String]) {
-        titleIngredient.text = text
+    func configureForMenu(_ indexPath: IndexPath, _ dictionary: [String: [String]]) {
+        let keysArray = Array(dictionary.keys)
+        let valuesArray = Array(dictionary.values)
         
+        let key = keysArray[indexPath.row]
+        let value = valuesArray[indexPath.row]
+        
+        titleIngredient.text = key
+        setupMenuElement(value)
         switchIngredient.removeFromSuperview()
     }
     
@@ -58,22 +71,16 @@ final class TableViewCell: UITableViewCell {
     }
     
     ///Метод для отработки нажатия на ячейку с выпадающим списком
-    func tapOnMenu(_ text: String) {
-        menuChildren.append(UIAction(title: text, state: .on, handler: actionClosure))
+    func setupOnMenu(_ array: [String]) {
+        for element in array {
+            menuChildren.append(UIAction(title: element, state: .on, handler: actionClosure))
+        }
     }
     
-    //    func tapOnMenu(_ array: [String]) {
-    //        for element in array {
-    //            menuIngredient.append(UIAction(title: element, state: .on, handler: actionClosure))
-    //        }
-    //    }
-
     //MARK: Private Metods
-    private func setupMenu(button: UIButton, array: [String], handler: @escaping UIActionHandler) {
-        var menu: [UIMenuElement] = []
-        
+    private func setupMenuElement(_ array: [String]) {
         for element in array {
-            menu.append(UIAction(title: element, handler: handler))
+            menuChildren.append(UIAction(title: element, handler: actionClosure))
         }
     }
 }
@@ -88,8 +95,10 @@ private extension TableViewCell {
         setupCell()
         setupLabel()
         setupSwitch()
+ //       setupActionClosure()
+        setupMenuChildren()
+        setupMenu()
         setupButton()
-     //   setupMenu()
     }
 }
 
@@ -116,26 +125,38 @@ private extension TableViewCell {
         switchIngredient.thumbTintColor = UIColor(named: ColorSet.brown)
     }
     
-    func setupButton() {
-        for element in defaultArray {
+//    func setupActionClosure() {
+//        for (key, value) in zip(keys, values) {
+//            menuChildren.append(UIAction(title: key, handler: actionClosure))
+//        }
+//    }
+    
+    func setupMenuChildren() {
+        menuChildren = [UIAction(title: "Action", handler: actionClosure)]
+    }
+    
+    func setupMenu() {
+        menuIngredient = UIMenu(title: "Menu", options: [], children: menuChildren)
+        
+        for element in defaultDict.keys {
             menuChildren.append(UIAction(title: element, handler: actionClosure))
         }
-
-       buttonIngredient.menu = UIMenu(options: .displayInline, children: menuChildren)
+    }
+    
+    func setupButton() {
+        buttonIngredient.menu = menuIngredient
         buttonIngredient.showsMenuAsPrimaryAction = true
         buttonIngredient.changesSelectionAsPrimaryAction = true
         
         buttonIngredient.tintColor = UIColor(named: ColorSet.brown)
         buttonIngredient.titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .regular)
+        
+        buttonIngredient.addTarget(self, action: #selector(menuActionTriggered), for: .menuActionTriggered)
     }
     
-    func setupMenu() {
-        
-        menuIngredient = UIMenu(title: "Test", options: .displayInline, children: menuChildren)
-        
-        for element in defaultArray {
-            menuChildren.append(UIAction(title: element, handler: actionClosure))
-        }
+    //FIXME: - Доработать метод
+    @objc func menuActionTriggered() {
+        print("Its OK")
     }
 }
 
