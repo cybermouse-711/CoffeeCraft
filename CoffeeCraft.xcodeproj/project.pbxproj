@@ -40,11 +40,12 @@
 		C68197DA2BD96655002E484B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197D92BD96655002E484B /* Constants.swift */; };
 		C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */; };
 		C6A3AC952B7C0A9A00853011 /* RecipeDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */; };
-		C6AA06542BEAA1C0009BB92E /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06532BEAA1C0009BB92E /* DataManager.swift */; };
+		C6AA06542BEAA1C0009BB92E /* DrinkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06532BEAA1C0009BB92E /* DrinkBuilder.swift */; };
 		C6AA06562BEC07F1009BB92E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06552BEC07F1009BB92E /* CustomButton.swift */; };
 		C6AA06582BEC080B009BB92E /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06572BEC080B009BB92E /* CustomLabel.swift */; };
 		C6AA065A2BEC0835009BB92E /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06592BEC0835009BB92E /* CustomNavigationBar.swift */; };
 		C6AD9C2F2B91295E0074ABAD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD9C2E2B91295E0074ABAD /* TableViewCell.swift */; };
+		C6F1CB5F2BF4030A00FD7818 /* RecipeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F1CB5E2BF4030A00FD7818 /* RecipeBuilder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,11 +82,12 @@
 		C68197D92BD96655002E484B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkView.swift; sourceTree = "<group>"; };
 		C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkViewController.swift; sourceTree = "<group>"; };
-		C6AA06532BEAA1C0009BB92E /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		C6AA06532BEAA1C0009BB92E /* DrinkBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkBuilder.swift; sourceTree = "<group>"; };
 		C6AA06552BEC07F1009BB92E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C6AA06572BEC080B009BB92E /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		C6AA06592BEC0835009BB92E /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		C6AD9C2E2B91295E0074ABAD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C6F1CB5E2BF4030A00FD7818 /* RecipeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				C626E7842BA6E5AD0021029B /* NetworkManager.swift */,
-				C6AA06532BEAA1C0009BB92E /* DataManager.swift */,
+				C6AA06532BEAA1C0009BB92E /* DrinkBuilder.swift */,
+				C6F1CB5E2BF4030A00FD7818 /* RecipeBuilder.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -370,7 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61603602B75762C00E1BC9E /* СreationDrinkView.swift in Sources */,
-				C6AA06542BEAA1C0009BB92E /* DataManager.swift in Sources */,
+				C6AA06542BEAA1C0009BB92E /* DrinkBuilder.swift in Sources */,
 				C68197C92BD848C7002E484B /* StartInteractor.swift in Sources */,
 				C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */,
 				C67581942B6E4CA800B81616 /* СreationDrinkViewController.swift in Sources */,
@@ -382,6 +385,7 @@
 				C68197C12BD8483D002E484B /* StartRouter.swift in Sources */,
 				C68197C32BD8485F002E484B /* StartModel.swift in Sources */,
 				C68197C52BD84892002E484B /* StartConfigurator.swift in Sources */,
+				C6F1CB5F2BF4030A00FD7818 /* RecipeBuilder.swift in Sources */,
 				C6AD9C2F2B91295E0074ABAD /* TableViewCell.swift in Sources */,
 				C6AA06562BEC07F1009BB92E /* CustomButton.swift in Sources */,
 				C68197C72BD848B2002E484B /* StartPresenter.swift in Sources */,
