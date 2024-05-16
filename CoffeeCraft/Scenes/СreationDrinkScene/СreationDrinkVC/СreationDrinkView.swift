@@ -19,8 +19,6 @@ final class СreationDrinkView: UIView {
     private let dict1: [String: Bool] = ["dishes": true, "milk": false, "type": true]
     private let dict2: [String: [String]] = ["grinding": ["dishes1", "dishes2", "dishes3"], "variety": ["type1", "type2", "type3"], "roasting": ["type4", "type5", "type6"]]
     
-    private var newSwitchs: [Bool] = []
-    
     //MARK: Init
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -120,8 +118,10 @@ extension СreationDrinkView: UITableViewDataSource {
         
         switch indexPath.section {
         case 0:
+            dict2.sorted( by:  {$0.key < $1.key} )
             customCell.configureForMenu(indexPath, dict2)
         case 1:
+            dict1.sorted( by:  {$0.key < $1.key} )
             customCell.configureForSwitch(indexPath, dict1)
         default:
             break
@@ -135,38 +135,19 @@ extension СreationDrinkView: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-//        
-//        guard let customCell = cell as? TableViewCell else { return }
-//        
-//        let cell: TableViewCell?
-        
-//        guard let cell = tableView.cellForRow(at: indexPath) as? TableViewCell else { return }
-//
-//        switch indexPath.section {
-//        case 0:
-//            var menu = arrays[indexPath.row]
-//            cell.tapOnMenu("Test")
-//        case 1:
-//            let text = titles[indexPath.row]
-//           var isOn = switchs[indexPath.row]
-//            isOn.toggle()
-//            newSwitchs.append(isOn)
-//            cell.configureForSwitch(text, isOn)
-//            
-//            tableView.reloadRows(at: [indexPath], with: .automatic)
-//        default:
-//            break
-//        }
-        
-//        if indexPath.section == 1 {
-//            var isOn = switchs[indexPath.row]
-//            isOn.toggle()
-//        }
-//
- //   
-    //    tableView.reloadRows(at: [indexPath], with: .automatic)
+  
+        guard let cell = tableView.cellForRow(at: indexPath) as? TableViewCell else { return }
+
+        switch indexPath.section {
+        case 0:
+            cell.tapOnMenu(indexPath, dict2)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        case 1:
+            cell.tapOnSwitch(indexPath, dict1)
+            tableView.reloadRows(at: [indexPath], with: .automatic)
+        default:
+            break
+        }
     }
 }
 
