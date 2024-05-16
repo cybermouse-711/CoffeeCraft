@@ -66,21 +66,29 @@ final class TableViewCell: UITableViewCell {
     }
     
     ///Метод для отработки нажатия на ячейку со свитчом
-    func tapOnSwitch() {
-        switchIngredient.isOn.toggle()
+    func tapOnSwitch(_ indexPath: IndexPath, _ dictionary: [String: Bool]) {
+        let valuesArray = Array(dictionary.values)
+        var value = valuesArray[indexPath.row]
+        value.toggle()
+        
+        switchIngredient.isOn = value
     }
     
     ///Метод для отработки нажатия на ячейку с выпадающим списком
-    func setupOnMenu(_ array: [String]) {
-        for element in array {
-            menuChildren.append(UIAction(title: element, state: .on, handler: actionClosure))
+    func tapOnMenu(_ indexPath: IndexPath, _ dictionary: [String: [String]]) {
+        let valuesArray = Array(dictionary.values)
+        let array = valuesArray[indexPath.row]
+        
+        for value in array {
+            menuChildren.append(UIAction(title: value, state: .on, handler: actionClosure))
         }
     }
     
     //MARK: Private Metods
     private func setupMenuElement(_ array: [String]) {
         for element in array {
-            menuChildren.append(UIAction(title: element, handler: actionClosure))
+            menuChildren = [UIAction(title: element, handler: actionClosure)]
+           // menuChildren.append(UIAction(title: element, handler: actionClosure))
         }
     }
 }
@@ -95,7 +103,6 @@ private extension TableViewCell {
         setupCell()
         setupLabel()
         setupSwitch()
- //       setupActionClosure()
         setupMenuChildren()
         setupMenu()
         setupButton()
@@ -125,14 +132,12 @@ private extension TableViewCell {
         switchIngredient.thumbTintColor = UIColor(named: ColorSet.brown)
     }
     
-//    func setupActionClosure() {
-//        for (key, value) in zip(keys, values) {
-//            menuChildren.append(UIAction(title: key, handler: actionClosure))
-//        }
-//    }
-    
     func setupMenuChildren() {
-        menuChildren = [UIAction(title: "Action", handler: actionClosure)]
+        let array = defaultDict.keys
+        
+        for element in array {
+            menuChildren = [UIAction(title: element, handler: actionClosure)]
+        }
     }
     
     func setupMenu() {
