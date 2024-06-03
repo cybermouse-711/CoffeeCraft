@@ -40,7 +40,7 @@ extension DrinkBuilder: IDrinkBuilder {
             //FIXME: - Убрать принудительное преобразование
             if modelElement as? Bool ?? false {
                 arrayForSwitch.append(modelElement as! Bool)
-            } else if ((modelElement as? Any ?? nil) != nil) {
+            } else {
                 arrayForMenu.append(modelElement)
             }
         }
@@ -85,8 +85,8 @@ extension DrinkBuilder: IDrinkBuilder {
 //            }
 //        }
         
-        let variety = [Grains.allCases.description]
-        let roasting = [Roasting.allCases.description]
+        let variety = [Drink.Grains.allCases.description]
+        let roasting = [Drink.Roasting.allCases.description]
         
         let modelAnyElements: [Any] = [[model.dishes.dishes], [model.grinding.grinding], roasting, [model.type.type], variety, [model.milk.milk]]
         

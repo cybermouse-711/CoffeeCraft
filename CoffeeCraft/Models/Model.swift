@@ -52,26 +52,25 @@ struct Drink {
     ///Температура напитка
     let ice = false
     
-}
+    //MARK: Coffee grains
+    enum Grains: String, CaseIterable {
+        case arabica = "Arabica"
+        case robusta = "Robusta"
+        case liberica = "Liberica"
+        case excelsa = "Excelsa"
+        ///По умолчанию
+        case defalt = "Default"
+    }
 
-//MARK: Coffee grains
-enum Grains: String, CaseIterable {
-    case arabica = "Arabica"
-    case robusta = "Robusta"
-    case liberica = "Liberica"
-    case excelsa = "Excelsa"
-    ///По умолчанию
-    case defalt = "Default"
-}
-
-//MARK: Roasting beans
-enum Roasting: String, CaseIterable {
-    case light = "Light"
-    case medium = "Medium"
-    case mediumDark = "Medium-Dark"
-    case dark = "Dark"
-    ///По умолчанию
-    case defalt = "Default"
+    //MARK: Roasting beans
+    enum Roasting: String, CaseIterable {
+        case light = "Light"
+        case medium = "Medium"
+        case mediumDark = "Medium-Dark"
+        case dark = "Dark"
+        ///По умолчанию
+        case defalt = "Default"
+    }
 }
 
 //MARK: - Recipe Drink for Scene
