@@ -28,8 +28,8 @@ extension StartInteractor: StartInteractorBusinessLogic, StartInteractorDataStor
         drink = Drink(
             dishes: Dishes(id: "", dishes: "", grinding: [""], shots: 1, recipe: ""),
             type: TypeCoffee(id: "", milk: true, type: "", shots: 0, recipe: "", fact: ""),
-            variety: Grains.arabica,
-            roasting: Roasting.dark,
+            variety: Drink.Grains.arabica,
+            roasting: Drink.Roasting.dark,
             grinding: Dishes(id: "", dishes: "", grinding: [""], shots: 1, recipe: ""),
             milk: TypeCoffee(id: "", milk: true, type: "", shots: 0, recipe: "", fact: "")
         )
