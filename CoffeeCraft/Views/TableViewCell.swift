@@ -119,7 +119,7 @@ private extension TableViewCell {
     }
     
     func setupCell() {
-        backgroundColor = UIColor(named: ColorSet.lightGray)
+        backgroundColor = UIColor(named: ColorSet.white)
     }
     
     func setupLabel() {

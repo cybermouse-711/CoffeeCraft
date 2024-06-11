@@ -41,7 +41,7 @@ private extension StartView {
 //MARK: - Setup UI
 private extension StartView {
     func setupSelfView() {
-        backgroundColor = UIColor(named: ColorSet.lightGray)
+        backgroundColor = UIColor(named: ColorSet.gray)
     }
     
     func addSubViews() {

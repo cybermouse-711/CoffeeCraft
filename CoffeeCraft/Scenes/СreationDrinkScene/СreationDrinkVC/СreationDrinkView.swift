@@ -47,7 +47,7 @@ private extension СreationDrinkView {
 //MARK: - Setup UI
 private extension СreationDrinkView {
     func setupSelfView(){
-        backgroundColor = UIColor(named: ColorSet.lightGray)
+        backgroundColor = UIColor(named: ColorSet.white)
     }
     
     func addSubViews() {
@@ -57,7 +57,7 @@ private extension СreationDrinkView {
     }
     
     func setupTableView() {
-        tableView.backgroundColor = UIColor(named: ColorSet.lightGray)
+        tableView.backgroundColor = UIColor(named: ColorSet.white)
         
         tableView.dataSource = self
         tableView.delegate = self

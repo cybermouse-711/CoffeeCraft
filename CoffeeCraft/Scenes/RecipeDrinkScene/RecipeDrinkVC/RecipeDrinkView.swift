@@ -42,7 +42,7 @@ private extension RecipeDrinkView {
 //MARK: - Setup UI
 private extension RecipeDrinkView {
     func setupSelfView() {
-        backgroundColor = UIColor(named: ColorSet.gray)
+        backgroundColor = UIColor(named: ColorSet.white)
     }
     
     func addSubViews() {
