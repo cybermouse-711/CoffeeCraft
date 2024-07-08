@@ -23,31 +23,22 @@ enum ColorSet {
     static let brown: String = "ButtonBrown"
 }
 
-///Cловарь с иконками
-enum IconsSet {
-    static let cezve: String = "cezve.png"
-    static let mokaPot: String = "mokaPot.png"
-    static let espressoMachine: String = "espressoMachine.png"
-    static let frenchPress: String = "frenchPress.png"
-    static let filter: String = "filter.png"
-}
-
 ///Словарь для Табличного представления
 enum TitlesofSection {
     static let titleforHeader0: String = "Customize your drink"
     static let titleforHeader1: String = "Add ingredients"
 }
 
-///Словарь с наименованиями файлов для парсинга
-enum File {
-    static let dishes: String = "dishes"
-    static let typeCoffee: String = "typeCoffee"
-}
-
-///Словарь с расширениями файлов для парсинга
-enum ExtensionFile {
-    static let json = "json"
-}
+/////Словарь с наименованиями файлов для парсинга
+//enum File {
+//    static let dishes: String = "dishes"
+//    static let typeCoffee: String = "typeCoffee"
+//}
+//
+/////Словарь с расширениями файлов для парсинга
+//enum ExtensionFile {
+//    static let json = "json"
+//}
 
 /////Перечисления для роутинга
 //enum Target {

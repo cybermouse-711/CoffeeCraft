@@ -28,6 +28,21 @@ enum Dishes: String {
             "For one shot of espresso: the best temperature for brewing coffee is 95°C, it will be in the kettle about a minute after it stops boiling. Insert the filter and wet it generously with hot water. Pour out this water so as not to get a papery taste in your coffee. Pour 1 tablespoon or 9g of coffee into the filter and smooth the layer.Gently pour in a little water (about 50 ml) to “wake up” the coffee. Wait 50 seconds. Spill the water in a diverging spiral. Maintain the same level of water in the filter so that the coffee brewing temperature remains constant."
         }
     }
+    
+    var icon: String {
+        switch self {
+        case .cezve:
+            "cezve.png"
+        case .mokaPot:
+            "mokaPot.png"
+        case .espressoMachine:
+            "espressoMachine.png"
+        case .frenchPress:
+            "frenchPress.png"
+        case .filter:
+            "filter.png"
+        }
+    }
 }
 
 enum TypeCoffee: String {
