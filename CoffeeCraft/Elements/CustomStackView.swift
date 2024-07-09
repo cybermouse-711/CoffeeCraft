@@ -21,14 +21,16 @@ final class CustomStackView: UIStackView {
     init(_ title: String, _ swytch: Bool) {
         super.init(frame: .zero)
         
-        distribution = .fillEqually
         axis = .horizontal
+        alignment = .center
+        distribution = .equalCentering
+        contentMode = .scaleToFill
         
-        var titleIngredient = CustomLabel(title, .mini)
-        var switchIngredient = UISwitch()
+        let titleIngredient = CustomLabel(title, .mini)
+        let switchIngredient = UISwitch()
         
-        addSubview(titleIngredient)
-        addSubview(switchIngredient)
+        addArrangedSubview(titleIngredient)
+        addArrangedSubview(switchIngredient)
         
         titleIngredient.textAlignment = .left
         titleIngredient.numberOfLines = 1
@@ -40,29 +42,21 @@ final class CustomStackView: UIStackView {
         snp.makeConstraints { make in
             make.height.equalTo(30)
         }
-        
-        titleIngredient.snp.makeConstraints { make in
-            make.leading.equalTo(16)
-            make.centerY.equalTo(15)
-        }
-        
-        switchIngredient.snp.makeConstraints { make in
-            make.trailing.equalTo(16)
-            make.centerY.equalTo(15)
-        }
     }
     
     init(_ title: String, _ children: [String]) {
         super.init(frame: .zero)
         
-        distribution = .fillEqually
         axis = .horizontal
+        alignment = .center
+        distribution = .equalCentering
+        contentMode = .scaleToFill
         
-        var titleIngredient = CustomLabel(title, .mini)
-        var menuButtonIngredient = CustomMenuButton("Select...", children)
+        let titleIngredient = CustomLabel(title, .mini)
+        let menuButtonIngredient = CustomMenuButton("Select...", children)
         
-        addSubview(titleIngredient)
-        addSubview(menuButtonIngredient)
+        addArrangedSubview(titleIngredient)
+        addArrangedSubview(menuButtonIngredient)
         
         titleIngredient.text = title
         titleIngredient.textAlignment = .left
@@ -70,16 +64,6 @@ final class CustomStackView: UIStackView {
         
         snp.makeConstraints { make in
             make.height.equalTo(30)
-        }
-        
-        titleIngredient.snp.makeConstraints { make in
-            make.leading.equalTo(16)
-            make.centerY.equalTo(15)
-        }
-        
-        menuButtonIngredient.snp.makeConstraints { make in
-            make.trailing.equalTo(16)
-            make.centerY.equalTo(15)
         }
     }
     

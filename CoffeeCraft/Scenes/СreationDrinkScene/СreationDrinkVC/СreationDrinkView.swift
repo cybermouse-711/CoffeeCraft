@@ -59,15 +59,17 @@ private extension СreationDrinkView {
     }
     
     func setupStackView() {
-        stackView.axis = .horizontal
-        stackView.distribution = .fill
-        stackView.spacing = 5
+        stackView.axis = .vertical
+        stackView.alignment = .fill
+        stackView.distribution = .fillEqually
+        stackView.spacing = 10
+        stackView.contentMode = .scaleToFill
         
-        stackView.addSubview(
+        stackView.addArrangedSubview(
             CustomStackView("label1", ["action1", "action2"])
         )
-        stackView.addSubview(
-            CustomStackView("label", true)
+        stackView.addArrangedSubview(
+            CustomStackView("label2", true)
         )
     }
 //
@@ -98,9 +100,9 @@ private extension СreationDrinkView {
     func setupConctraints() {
         
         stackView.snp.makeConstraints { make in
-            make.top.equalTo(safeAreaLayoutGuide)
-            make.trailing.equalTo(safeAreaLayoutGuide)
-            make.leading.equalTo(safeAreaLayoutGuide)
+            make.top.equalTo(16)
+            make.trailing.equalTo(-16)
+            make.leading.equalTo(16)
             make.bottom.equalTo(createButton).offset(-150)
         }
         
