@@ -37,7 +37,7 @@ final class CustomStackView: UIStackView {
         
         switchIngredient.isOn = swytch
         switchIngredient.onTintColor = UIColor(named: ColorSet.brown)
-        switchIngredient.thumbTintColor = UIColor(named: ColorSet.gray)
+        switchIngredient.thumbTintColor = UIColor(named: ColorSet.brown)
         
         snp.makeConstraints { make in
             make.height.equalTo(30)

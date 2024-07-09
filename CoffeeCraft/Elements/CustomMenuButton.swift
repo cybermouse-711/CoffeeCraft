@@ -12,11 +12,7 @@ import UIKit
 final class CustomMenuButton: UIButton {
     
     //MARK: Private properties
-//    private var menuButton = UIMenu()
     private var children = [UIAction]()
-    private let actionClosure = { (action: UIAction) in
-        print(action.title)
-    }
     
     //MARK: Init
     init(_ title: String, _ actions: [String]) {
@@ -27,7 +23,9 @@ final class CustomMenuButton: UIButton {
         titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         
         for action in actions {
-            children.append(UIAction(title: action, state: .on, handler: actionClosure))
+            children.append(UIAction(title: action, state: .on, handler: { (action: UIAction) in
+                self.setTitle("\(action.title)", for: .normal)
+            }))
         }
         
         let menuButton = UIMenu(title: title, children: children)
