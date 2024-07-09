@@ -47,7 +47,6 @@
 		C6AA065A2BEC0835009BB92E /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06592BEC0835009BB92E /* CustomNavigationBar.swift */; };
 		C6AA25022C3C3E4800DC5DBD /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA25012C3C3E4800DC5DBD /* CustomStackView.swift */; };
 		C6AA25042C3C839E00DC5DBD /* CustomMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA25032C3C839E00DC5DBD /* CustomMenuButton.swift */; };
-		C6AD9C2F2B91295E0074ABAD /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD9C2E2B91295E0074ABAD /* TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,7 +90,6 @@
 		C6AA06592BEC0835009BB92E /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
 		C6AA25012C3C3E4800DC5DBD /* CustomStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomStackView.swift; sourceTree = "<group>"; };
 		C6AA25032C3C839E00DC5DBD /* CustomMenuButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMenuButton.swift; sourceTree = "<group>"; };
-		C6AD9C2E2B91295E0074ABAD /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +200,6 @@
 				C67581992B6E9D5B00B81616 /* Scenes */,
 				C68197DB2BD96A28002E484B /* Helpers */,
 				C662E01B2B7F8E0100548B44 /* Elements */,
-				C6C527042B87F9CD00385A08 /* Views */,
 				C626E7862BA6E5B20021029B /* Services */,
 				C6118AFC2C3D69360015A5A8 /* Models */,
 				C626E7832BA5EC4F0021029B /* JSONs */,
@@ -288,14 +285,6 @@
 				C68197CB2BD84DE1002E484B /* RecipeDrinkVC */,
 			);
 			path = RecipeDrinkScene;
-			sourceTree = "<group>";
-		};
-		C6C527042B87F9CD00385A08 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				C6AD9C2E2B91295E0074ABAD /* TableViewCell.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -392,7 +381,6 @@
 				C68197C12BD8483D002E484B /* StartRouter.swift in Sources */,
 				C68197C32BD8485F002E484B /* StartModel.swift in Sources */,
 				C68197C52BD84892002E484B /* StartConfigurator.swift in Sources */,
-				C6AD9C2F2B91295E0074ABAD /* TableViewCell.swift in Sources */,
 				C6AA06562BEC07F1009BB92E /* CustomButton.swift in Sources */,
 				C6AA25022C3C3E4800DC5DBD /* CustomStackView.swift in Sources */,
 				C68197C72BD848B2002E484B /* StartPresenter.swift in Sources */,
