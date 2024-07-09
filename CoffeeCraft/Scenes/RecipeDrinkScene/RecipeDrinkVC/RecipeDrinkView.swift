@@ -52,7 +52,7 @@ private extension RecipeDrinkView {
     }
     
     func setupRecipeDrinkImage(){
-        recipeDrinkImage.image = UIImage(named: IconsSet.mokaPot)
+        recipeDrinkImage.image = UIImage(named: "mokaPot.png")
         recipeDrinkImage.layer.backgroundColor = .none
         recipeDrinkImage.tintColor = UIColor(named: ColorSet.brown)
     }

@@ -25,14 +25,7 @@ final class RecipeDrinkInteractor {
 extension RecipeDrinkInteractor: RecipeDrinkInteractorBusinessLogic, RecipeDrinkInteractorDataStore {
     
     func showRecipeDrink(request: RecipeDrinkRequest) {
-        drink = Drink(
-            dishes: Dishes(id: "", dishes: "", grinding: [""], shots: 1, recipe: ""),
-            type: TypeCoffee(id: "", milk: true, type: "", shots: 0, recipe: "", fact: ""),
-            variety: Drink.Grains.arabica,
-            roasting: Drink.Roasting.dark,
-            grinding: Dishes(id: "", dishes: "", grinding: [""], shots: 1, recipe: ""),
-            milk: TypeCoffee(id: "", milk: true, type: "", shots: 0, recipe: "", fact: "")
-        )
+        drink = Drink(dishes: ["test"], type: ["test"], coffee: ["test"], grains: ["test"], roasting: ["test"], grinding: ["test"], ingredients: ["test": false])
         let response = RecipeDrinkResponse()
         presenter?.presentRecipeDrink(response: response)
     }
