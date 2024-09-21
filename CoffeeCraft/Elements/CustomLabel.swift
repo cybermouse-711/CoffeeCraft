@@ -27,21 +27,21 @@ final class CustomLabel: UILabel {
         case .mini:
             text = title
             font = UIFont.systemFont(ofSize: 15, weight: .regular)
-            textColor = UIColor(named: ColorSet.black)
+            textColor = UIColor(named: ColorSet.text)
             textAlignment = textAlignment
             numberOfLines = 0
             
         case .middle:
             text = title
             font = UIFont.systemFont(ofSize: 20, weight: .regular)
-            textColor = UIColor(named: ColorSet.black)
+            textColor = UIColor(named: ColorSet.text)
             textAlignment = textAlignment
             numberOfLines = 0
             
         case .maxi:
             text = title
             font = UIFont.systemFont(ofSize: 25, weight: .regular)
-            textColor = UIColor(named: ColorSet.black)
+            textColor = UIColor(named: ColorSet.text)
             textAlignment = textAlignment
             numberOfLines = 0
         }

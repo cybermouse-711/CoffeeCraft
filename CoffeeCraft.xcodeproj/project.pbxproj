@@ -35,8 +35,6 @@
 		C68197CF2BD84E58002E484B /* RecipeDrinkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197CE2BD84E58002E484B /* RecipeDrinkModel.swift */; };
 		C68197D12BD84E71002E484B /* RecipeDrinkConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197D02BD84E71002E484B /* RecipeDrinkConfigurator.swift */; };
 		C68197D32BD84E8F002E484B /* RecipeDrinkPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197D22BD84E8F002E484B /* RecipeDrinkPresenter.swift */; };
-		C68197D62BD85108002E484B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C68197D52BD85108002E484B /* SnapKit */; };
-		C68197D82BD85108002E484B /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = C68197D72BD85108002E484B /* SnapKit-Dynamic */; };
 		C68197DA2BD96655002E484B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68197D92BD96655002E484B /* Constants.swift */; };
 		C6846A0A2C3D676200AFCB63 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6846A092C3D676200AFCB63 /* DataManager.swift */; };
 		C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */; };
@@ -47,6 +45,7 @@
 		C6AA065A2BEC0835009BB92E /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06592BEC0835009BB92E /* CustomNavigationBar.swift */; };
 		C6AA25022C3C3E4800DC5DBD /* CustomStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA25012C3C3E4800DC5DBD /* CustomStackView.swift */; };
 		C6AA25042C3C839E00DC5DBD /* CustomMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA25032C3C839E00DC5DBD /* CustomMenuButton.swift */; };
+		C6D8174C2C9F06A40005D6CE /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = C6D8174B2C9F06A40005D6CE /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,8 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C68197D62BD85108002E484B /* SnapKit in Frameworks */,
-				C68197D82BD85108002E484B /* SnapKit-Dynamic in Frameworks */,
+				C6D8174C2C9F06A40005D6CE /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,8 +302,7 @@
 			);
 			name = CoffeeCraft;
 			packageProductDependencies = (
-				C68197D52BD85108002E484B /* SnapKit */,
-				C68197D72BD85108002E484B /* SnapKit-Dynamic */,
+				C6D8174B2C9F06A40005D6CE /* SnapKit */,
 			);
 			productName = CoffeeCraft;
 			productReference = C67581782B6AEA4200B81616 /* CoffeeCraft.app */;
@@ -336,7 +333,7 @@
 			);
 			mainGroup = C675816F2B6AEA4200B81616;
 			packageReferences = (
-				C68197D42BD85108002E484B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				C6D8174A2C9F06A40005D6CE /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = C67581792B6AEA4200B81616 /* Products */;
 			projectDirPath = "";
@@ -621,7 +618,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C68197D42BD85108002E484B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+		C6D8174A2C9F06A40005D6CE /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
 			requirement = {
@@ -632,15 +629,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C68197D52BD85108002E484B /* SnapKit */ = {
+		C6D8174B2C9F06A40005D6CE /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C68197D42BD85108002E484B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			package = C6D8174A2C9F06A40005D6CE /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		C68197D72BD85108002E484B /* SnapKit-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C68197D42BD85108002E484B /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = "SnapKit-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

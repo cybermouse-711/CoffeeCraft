@@ -19,7 +19,7 @@ final class CustomMenuButton: UIButton {
         super.init(frame: .zero)
         
         setTitle(title, for: .normal)
-        setTitleColor(UIColor(named: ColorSet.brown), for: .normal)
+        setTitleColor(UIColor(named: ColorSet.buttonBrown), for: .normal)
         titleLabel?.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         
         for action in actions {

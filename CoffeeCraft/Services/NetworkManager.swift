@@ -7,6 +7,7 @@
 
 import Foundation
 
+//TODO: deleted
 //MARK: - Protocols
 protocol INetworkManager {
     func fetchNetwork<T: Decodable>(_ type: T.Type, _ file: String, _ extensionFile: String, completion: @escaping(Result<T, Error>) -> Void)

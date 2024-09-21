@@ -42,7 +42,7 @@ private extension RecipeDrinkView {
 //MARK: - Setup UI
 private extension RecipeDrinkView {
     func setupSelfView() {
-        backgroundColor = UIColor(named: ColorSet.white)
+        backgroundColor = UIColor(named: ColorSet.scene)
     }
     
     func addSubViews() {
@@ -54,7 +54,7 @@ private extension RecipeDrinkView {
     func setupRecipeDrinkImage(){
         recipeDrinkImage.image = UIImage(named: "mokaPot.png")
         recipeDrinkImage.layer.backgroundColor = .none
-        recipeDrinkImage.tintColor = UIColor(named: ColorSet.brown)
+        recipeDrinkImage.tintColor = UIColor(named: ColorSet.buttonBrown)
     }
     
     func setupRecipeDrinkLabel(){

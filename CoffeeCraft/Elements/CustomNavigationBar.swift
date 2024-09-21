@@ -21,11 +21,11 @@ final class CustomNavigationBar: UINavigationBar {
         let navigationController = navigationController 
 
         navigationController.navigationBar.topItem?.title = title
-        navigationController.navigationBar.tintColor = UIColor(named: ColorSet.darkGray)
+        navigationController.navigationBar.tintColor = UIColor(named: ColorSet.navBar)
         
-        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: ColorSet.darkGray) ?? UIColor.white]
-        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: ColorSet.darkGray) ?? UIColor.white]
-        navBarAppearance.backgroundColor = UIColor(named: ColorSet.gray)
+        navBarAppearance.titleTextAttributes = [.foregroundColor: UIColor(named: ColorSet.textWhite) ?? UIColor.white]
+        navBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor(named: ColorSet.textWhite) ?? UIColor.white]
+        navBarAppearance.backgroundColor = UIColor(named: ColorSet.buttonBeige)
         
         navigationController.navigationBar.standardAppearance = navBarAppearance
         navigationController.navigationBar.scrollEdgeAppearance = navBarAppearance

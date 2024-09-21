@@ -15,12 +15,12 @@ enum Titles {
 
 ///Словарь с перечислением цветов
 enum ColorSet {
-    static let white: String = "SceneWhite"
-    static let lightGray: String = "SceneLightGray"
-    static let darkGray: String = "SceneDarkGray"
-    static let black: String = "SceneBlack"
-    static let gray: String = "ButtonGray"
-    static let brown: String = "ButtonBrown"
+    static let scene: String = "ColorScene"
+    static let navBar: String = "ColorBarBeige"
+    static let text: String = "ColorText"
+    static let textWhite: String = "ColorWhiteText"
+    static let buttonBeige: String = "ColorButtonBeige"
+    static let buttonBrown: String = "ColorButtonBrown"
 }
 
 ///Словарь для Табличного представления
@@ -28,22 +28,3 @@ enum TitlesofSection {
     static let titleforHeader0: String = "Customize your drink"
     static let titleforHeader1: String = "Add ingredients"
 }
-
-/////Словарь с наименованиями файлов для парсинга
-//enum File {
-//    static let dishes: String = "dishes"
-//    static let typeCoffee: String = "typeCoffee"
-//}
-//
-/////Словарь с расширениями файлов для парсинга
-//enum ExtensionFile {
-//    static let json = "json"
-//}
-//
-/////Перечисления для роутинга
-//enum Target {
-//    
-//    case start
-//    case creationDrink
-//    case recipeDrink
-//}

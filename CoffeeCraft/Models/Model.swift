@@ -44,6 +44,7 @@ struct Drink {
     ///Ингредиенты
     let ingredients: [String: Bool]
     
+//TODO: deleted
 //    ///Добавить сахар
 //    let sugar = false
 //    ///Добавить  мед

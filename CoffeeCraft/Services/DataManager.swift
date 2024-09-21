@@ -19,7 +19,7 @@ enum Dishes: String {
         case .cezve:
             "For one shot of espresso: pour the water into the cezve. Add the 1 tablespoons coffee and sugar, if using. Mix well to dissolve the coffee and sugar. Do not stir after this point. Place the cezve on the stovetop over medium heat. After a few minutes, the coffee will rise and foam up. Just before it begins to boil, remove the cezve from the heat. Skim off the foam, adding a little to each serving cup. Return the cezve to the heat and let it slowly foam up again. Pour the coffee very slowly into the serving cups so the foam rises to the top. Let the coffee settle for a few minutes."
         case .mokaPot:
-            "For one shot of espresso: set your kettle to boil, or, if you’re using a temperature controlled kettle. Add your heated water to the bottom of the Moka pot, filling to the line inside the carafe. Put the metal filter basket into the brewer and place it on the scale. Tare your scale and add 1-2 tablespoons of freshly ground coffee into the filter. Use your finger to level out the grounds, or, using a heat-resistant towel, give it a gentle shake to level out the grounds. Remove the brewer from the scale. Screw the top and bottom together using a heat-resistant towel. Turn on your heat source to medium-low and put the Moka pot on top. Leave the top lid open. The coffee will begin to come out of the spout. Close the lid. When you hear a hissing sound, remove the Moka pot from the heat source and allow the coffee to finish brewing."
+            "For one shot of espresso: set your kettle to boil, or, if you’re using a temperature controlled kettle. Add your heated water to the bottom of the Moka pot, filling to the line inside the carafe. Put the metal filter basket into the brewer. Add 1-2 tablespoons of freshly ground coffee into the filter. Use your finger to level out the grounds, or, using a heat-resistant towel, give it a gentle shake to level out the grounds. Screw the top and bottom together using a heat-resistant towel. Turn on your heat source to medium-low and put the Moka pot on top. Leave the top lid open. The coffee will begin to come out of the spout. Close the lid. When you hear a hissing sound, remove the Moka pot from the heat source and allow the coffee to finish brewing."
         case .espressoMachine:
             "For one shot of espresso: measure 1 tablespoon or 9g of beans for a single shot. Tamp horizontally and straight and place the watercup onto the (naked)portafilter. Fill 30 ml boiled water till first marker line (the ideal temperature for espresso is 95° C). Slide the combination into the Superkop. Pull the lever 6 times in 25-30 seconds…don’t go too fast. Pour the shot into a preheated cup."
         case .frenchPress:
@@ -41,6 +41,21 @@ enum Dishes: String {
             "frenchPress.png"
         case .filter:
             "filter.png"
+        }
+    }
+    
+    var time: String {
+        switch self {
+        case .cezve:
+            "5.0"
+        case .mokaPot:
+            "6.0"
+        case .espressoMachine:
+            "0.5"
+        case .frenchPress:
+            "4.0"
+        case .filter:
+            "0.8"
         }
     }
 }
@@ -141,7 +156,7 @@ enum Grinding: String {
     case defalt = "Default"
 }
 
-enum Other {
+enum Additional {
     static let ingredients = ["Sugar": false, "Honey": false, "Spices": false, "Syrup": false, "Ice": false]
 }
 

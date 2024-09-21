@@ -6,7 +6,8 @@
 //
 
 //import Foundation
-//
+
+//TODO: deleted
 ////MARK: - Protocols
 //protocol IDrinkBuilder {
 //    ///Метод для преобразования модели с словарь

@@ -25,9 +25,9 @@ final class CustomButton: UIButton {
         switch size {
         case .mini:
             setTitle(title, for: .normal)
-            setTitleColor(UIColor(named: ColorSet.white), for: .normal)
+            setTitleColor(UIColor(named: ColorSet.textWhite), for: .normal)
             layer.cornerRadius = 25
-            backgroundColor = UIColor(named: ColorSet.brown)
+            backgroundColor = UIColor(named: ColorSet.buttonBrown)
             titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .medium)
             
             snp.makeConstraints { make in
@@ -36,9 +36,9 @@ final class CustomButton: UIButton {
             
         case .maxi:
             setTitle(title, for: .normal)
-            setTitleColor(UIColor(named: ColorSet.white), for: .normal)
+            setTitleColor(UIColor(named: ColorSet.textWhite), for: .normal)
             layer.cornerRadius = 30
-            backgroundColor = UIColor(named: ColorSet.brown)
+            backgroundColor = UIColor(named: ColorSet.buttonBrown)
             titleLabel?.font = UIFont.systemFont(ofSize: 30, weight: .medium)
             
             snp.makeConstraints { make in

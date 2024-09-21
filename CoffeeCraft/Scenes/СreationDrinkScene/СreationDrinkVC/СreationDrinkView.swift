@@ -47,7 +47,7 @@ private extension СreationDrinkView {
 //MARK: - Setup UI
 private extension СreationDrinkView {
     func setupSelfView(){
-        backgroundColor = UIColor(named: ColorSet.white)
+        backgroundColor = UIColor(named: ColorSet.scene)
     }
     
     func addSubViews() {
