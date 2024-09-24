@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum Dishes: String {
+enum Dishes: String, CaseIterable {
     case cezve = "Cezve"
     case mokaPot = "Moka Pot"
     case espressoMachine = "Espresso Machine"
@@ -60,12 +60,12 @@ enum Dishes: String {
     }
 }
 
-enum TypeCoffee: String {
+enum TypeCoffee: String, CaseIterable {
     case white = "White Coffee"
     case black = "Black Coffee"
 }
 
-enum WhiteCoffee: String {
+enum WhiteCoffee: String, CaseIterable {
     case macchiato = "Macchiato"
     case longMacchiato = "Long Macchiato"
     case cortado = "Cortado"
@@ -103,7 +103,7 @@ enum WhiteCoffee: String {
     }
 }
 
-enum BlackCoffee: String {
+enum BlackCoffee: String, CaseIterable {
     case espresso = "Espresso"
     case doubleEspresso = "Double Espresso"
     case redEye = "Red Eye"
@@ -129,7 +129,7 @@ enum BlackCoffee: String {
     }
 }
 
-enum Grains: String {
+enum Grains: String, CaseIterable {
     case arabica = "Arabica"
     case robusta = "Robusta"
     case liberica = "Liberica"
@@ -138,7 +138,7 @@ enum Grains: String {
     case defalt = "Default"
 }
 
-enum Roasting: String {
+enum Roasting: String, CaseIterable {
     case light = "Light"
     case medium = "Medium"
     case mediumDark = "Medium Dark"
@@ -147,7 +147,7 @@ enum Roasting: String {
     case defalt = "Default"
 }
 
-enum Grinding: String {
+enum Grinding: String, CaseIterable {
     case extraFine = "Extra fine"
     case fine = "Fine"
     case medium = "Medium"
