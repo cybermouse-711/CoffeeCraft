@@ -39,7 +39,7 @@
 		C6846A0A2C3D676200AFCB63 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6846A092C3D676200AFCB63 /* DataManager.swift */; };
 		C6A3AC932B7C0A7F00853011 /* RecipeDrinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */; };
 		C6A3AC952B7C0A9A00853011 /* RecipeDrinkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */; };
-		C6AA06542BEAA1C0009BB92E /* DrinkBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06532BEAA1C0009BB92E /* DrinkBuilder.swift */; };
+		C6AA06542BEAA1C0009BB92E /* SceneBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06532BEAA1C0009BB92E /* SceneBuilder.swift */; };
 		C6AA06562BEC07F1009BB92E /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06552BEC07F1009BB92E /* CustomButton.swift */; };
 		C6AA06582BEC080B009BB92E /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06572BEC080B009BB92E /* CustomLabel.swift */; };
 		C6AA065A2BEC0835009BB92E /* CustomNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AA06592BEC0835009BB92E /* CustomNavigationBar.swift */; };
@@ -83,7 +83,7 @@
 		C6846A092C3D676200AFCB63 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C6A3AC922B7C0A7F00853011 /* RecipeDrinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkView.swift; sourceTree = "<group>"; };
 		C6A3AC942B7C0A9A00853011 /* RecipeDrinkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDrinkViewController.swift; sourceTree = "<group>"; };
-		C6AA06532BEAA1C0009BB92E /* DrinkBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkBuilder.swift; sourceTree = "<group>"; };
+		C6AA06532BEAA1C0009BB92E /* SceneBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneBuilder.swift; sourceTree = "<group>"; };
 		C6AA06552BEC07F1009BB92E /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		C6AA06572BEC080B009BB92E /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		C6AA06592BEC0835009BB92E /* CustomNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationBar.swift; sourceTree = "<group>"; };
@@ -149,7 +149,7 @@
 			children = (
 				C6846A092C3D676200AFCB63 /* DataManager.swift */,
 				C626E7842BA6E5AD0021029B /* NetworkManager.swift */,
-				C6AA06532BEAA1C0009BB92E /* DrinkBuilder.swift */,
+				C6AA06532BEAA1C0009BB92E /* SceneBuilder.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -365,7 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C61603602B75762C00E1BC9E /* СreationDrinkView.swift in Sources */,
-				C6AA06542BEAA1C0009BB92E /* DrinkBuilder.swift in Sources */,
+				C6AA06542BEAA1C0009BB92E /* SceneBuilder.swift in Sources */,
 				C68197C92BD848C7002E484B /* StartInteractor.swift in Sources */,
 				C67581802B6AEA4200B81616 /* StartViewController.swift in Sources */,
 				C67581942B6E4CA800B81616 /* СreationDrinkViewController.swift in Sources */,
